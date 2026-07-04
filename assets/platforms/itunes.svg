@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="286px" height="286px" viewBox="0 0 286 286" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>tidal copy 3</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="96.21336%" y1="34.1206395%" x2="3.30365795%" y2="62.0276163%" id="linearGradient-1">
+            <stop stop-color="#799FD5" offset="0%"></stop>
+            <stop stop-color="#BC75B1" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="79.0243459%" y1="10.5741279%" x2="22.2807655%" y2="90.3025073%" id="linearGradient-2">
+            <stop stop-color="#E75D7F" offset="0%"></stop>
+            <stop stop-color="#9551FC" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="74.9454942%" y1="94.4161822%" x2="21.3178295%" y2="6.33630087%" id="linearGradient-3">
+            <stop stop-color="#23C9FE" offset="0%"></stop>
+            <stop stop-color="#FF5C51" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="87.6720067%" y1="98.6462853%" x2="36.8777253%" y2="27.9312016%" id="linearGradient-4">
+            <stop stop-color="#18C7FB" stop-opacity="0.557213849" offset="0%"></stop>
+            <stop stop-color="#25CAFB" stop-opacity="0.68" offset="44.9812533%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="50%" y1="36.4053416%" x2="0%" y2="64.1503149%" id="linearGradient-5">
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="0%"></stop>
+            <stop stop-color="#B689FC" stop-opacity="0.677711829" offset="39.4440407%"></stop>
+            <stop stop-color="#B689FC" stop-opacity="0.677711829" offset="39.4440407%"></stop>
+            <stop stop-color="#9451FB" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="64.5167151%" y1="34.164547%" x2="107.005511%" y2="0%" id="linearGradient-6">
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="0%"></stop>
+            <stop stop-color="#B689FC" stop-opacity="0.677711829" offset="39.4440407%"></stop>
+            <stop stop-color="#B689FC" stop-opacity="0.677711829" offset="72.725218%"></stop>
+            <stop stop-color="#9451FB" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="50%" y1="50%" x2="28.1689075%" y2="-8.20463905%" id="linearGradient-7">
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="0%"></stop>
+            <stop stop-color="#FFA29A" stop-opacity="0.5" offset="18.1775616%"></stop>
+            <stop stop-color="#FF5E50" offset="100%"></stop>
+        </linearGradient>
+        <circle id="path-8" cx="129" cy="129" r="129"></circle>
+        <linearGradient x1="26.9358407%" y1="89.404729%" x2="80.2561532%" y2="-27.7983269%" id="linearGradient-9">
+            <stop stop-color="#E0E2E8" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="tidal-copy-3">
+            <g id="Group-2" transform="translate(14.000000, 14.000000)">
+                <g id="Group">
+                    <g id="Oval-2">
+                        <use fill="url(#linearGradient-1)" xlink:href="#path-8"></use>
+                        <use fill="url(#linearGradient-2)" xlink:href="#path-8"></use>
+                        <use fill-opacity="0.600000024" fill="url(#linearGradient-3)" xlink:href="#path-8"></use>
+                        <use fill="url(#linearGradient-4)" xlink:href="#path-8"></use>
+                        <use fill="url(#linearGradient-5)" xlink:href="#path-8"></use>
+                        <use fill="url(#linearGradient-6)" xlink:href="#path-8"></use>
+                        <use fill="url(#linearGradient-7)" xlink:href="#path-8"></use>
+                    </g>
+                    <path d="M129,242 C66.5918233,242 16,191.408177 16,129 C16,66.5918233 66.5918233,16 129,16 C191.408177,16 242,66.5918233 242,129 C242,191.408177 191.408177,242 129,242 Z M99.8780229,69.5583508 L99.7869962,101.576824 L99.8780229,158.824753 C96.4607002,156.75323 92.2717181,155.521988 87.7714622,155.521988 C76.17891,155.521988 66.8353045,163.635458 66.8353045,173.595453 C66.8353045,183.555448 76.17891,191.577174 87.7714622,191.577174 C99.3640144,191.577174 109.21183,183.546728 108.798647,173.595453 L108.586591,168.488057 L108.070438,99.2832371 L169.78659,82.4941809 L169.78659,145.705436 C166.182719,143.202234 161.582925,141.668723 156.587708,141.668723 C144.995156,141.668723 135.65155,149.782193 135.65155,159.742188 C135.65155,169.702183 144.995156,177.723909 156.587708,177.723909 C168.18026,177.723909 177.924585,169.702183 177.924585,159.742188 C177.924585,159.680145 177.942722,133.19691 177.978997,80.2924843 L177.978997,51.9437501 L177.978997,48.2738643 L99.8780229,69.5583508 Z" id="Combined-Shape" fill="url(#linearGradient-9)"></path>
+                </g>
+                <g id="ITunes_Store_icon" transform="translate(66.000000, 48.000000)">
+                    <g id="g3044"></g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,22 @@
+{
+  "pairs": [
+    {
+      "id": "track-01",
+      "artist": "Varika",
+      "title": "Red",
+      "genre": "альтернатива / инди",
+      "year": null,
+      "before": "track-01/before.mp3",
+      "after": "track-01/after.mp3"
+    },
+    {
+      "id": "track-02",
+      "artist": "ZarisovkN",
+      "title": "Записная книжка",
+      "genre": "поп-рок",
+      "year": null,
+      "before": "track-02/before.mp3",
+      "after": "track-02/after.mp3"
+    }
+  ]
+}

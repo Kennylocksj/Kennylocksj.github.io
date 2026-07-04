@@ -1,0 +1,1089 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#0B0B0D" />
+  <meta name="description"
+    content="Иннокентий Седунов — звукорежиссёр Subbox Records (Санкт-Петербург). Свожу и мастерю треки, которые попадают в редакторские плейлисты." />
+  <title>Иннокентий Седунов · Subbox Records — сведение и мастеринг</title>
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Иннокентий Седунов · Subbox Records" />
+  <meta property="og:description"
+    content="Звукорежиссёр Subbox Records (Санкт-Петербург). Сведение, мастеринг и запись вокала." />
+  <meta property="og:image" content="https://kennylocksj.github.io/assets/portrait.jpg" />
+  <meta property="og:url" content="https://kennylocksj.github.io/" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="icon"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230B0B0D'/%3E%3Crect x='6' y='13' width='2.5' height='6' fill='%23C3F53C'/%3E%3Crect x='10' y='10' width='2.5' height='12' fill='%23C3F53C'/%3E%3Crect x='14' y='7' width='2.5' height='18' fill='%23C3F53C'/%3E%3Crect x='18' y='11' width='2.5' height='10' fill='%23C3F53C'/%3E%3Crect x='22' y='14' width='2.5' height='4' fill='%23C3F53C'/%3E%3C/svg%3E" />
+  <link rel="preload" as="image" href="assets/portrait.jpg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Montserrat:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="players.css" />
+</head>
+
+<body>
+
+  <!-- Skip-link: a11y — клавиатурная навигация сразу к контенту -->
+  <a class="skip-link" href="#top">Перейти к содержимому</a>
+
+  <!-- Grain overlay — рукотворная фактура поверх всего (fixed, без repaint) -->
+  <div class="grain" aria-hidden="true"></div>
+
+  <!-- Scroll progress — тонкая lime-полоска под шапкой, --progress из main.js -->
+  <div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
+
+  <!-- ═══ NAV ═══ -->
+  <header class="nav" id="nav">
+    <div class="nav-wrap">
+      <a href="#top" class="brand" aria-label="На главную">
+        <span class="brand-mark" aria-hidden="true">
+          <span></span><span></span><span></span><span></span><span></span>
+        </span>
+        <span class="brand-text">
+          <span>Седунов</span>
+          <small>/ subbox records · spb</small>
+        </span>
+      </a>
+
+      <nav class="nav-links" id="nav-links">
+        <a href="#about">Обо&nbsp;мне</a>
+        <a href="#work">Работы</a>
+        <a href="#services">Услуги</a>
+        <a href="#pricing">Цены</a>
+        <a href="#faq">Вопросы</a>
+        <a href="/portfolio" class="nav-portfolio">Портфолио</a>
+
+        <!--
+          Mobile-only блок внутри бургер-меню: Telegram-строка и CTA.
+          Скрыт на десктопе, показывается только при .nav-links.open на ≤720px.
+        -->
+        <div class="nav-mobile-extras" aria-hidden="true">
+          <a href="https://t.me/Blindfo1d" target="_blank" rel="noopener" class="nav-mobile-link nav-mobile-tg">
+            <svg class="nav-mobile-link-ico" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"
+              aria-hidden="true">
+              <path
+                d="M12 0C5.37 0 0 5.37 0 12s5.37 12 12 12 12-5.37 12-12S18.63 0 12 0zm5.9 8.11l-1.97 9.28c-.15.66-.54.82-1.09.51l-3.02-2.23-1.46 1.4c-.16.16-.3.3-.61.3l.22-3.08 5.62-5.08c.24-.22-.05-.34-.38-.12L8.3 13.15 4.8 12.05c-.76-.24-.77-.76.16-1.13l13.7-5.29c.63-.24 1.18.14.98 1.48z" />
+            </svg>
+            <span>@Blindfo1d</span>
+            <svg class="nav-mobile-link-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none"
+              aria-hidden="true">
+              <path d="M7 17L17 7M9 7h8v8" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </a>
+          <a href="#contact" class="nav-mobile-link nav-mobile-cta">
+            <span class="nav-mobile-cta-dot" aria-hidden="true"></span>
+            <span>Обсудить&nbsp;проект</span>
+            <svg class="nav-mobile-link-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none"
+              aria-hidden="true">
+              <path d="M7 17L17 7M9 7h8v8" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </a>
+        </div>
+      </nav>
+
+      <div class="nav-right">
+        <a href="https://t.me/Blindfo1d" target="_blank" rel="noopener" class="nav-tg" aria-label="Telegram">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path
+              d="M12 0C5.37 0 0 5.37 0 12s5.37 12 12 12 12-5.37 12-12S18.63 0 12 0zm5.9 8.11l-1.97 9.28c-.15.66-.54.82-1.09.51l-3.02-2.23-1.46 1.4c-.16.16-.3.3-.61.3l.22-3.08 5.62-5.08c.24-.22-.05-.34-.38-.12L8.3 13.15 4.8 12.05c-.76-.24-.77-.76.16-1.13l13.7-5.29c.63-.24 1.18.14.98 1.48z" />
+          </svg>
+          <span>@Blindfo1d</span>
+        </a>
+        <a href="#contact" class="btn btn-primary btn-sm">
+          Обсудить проект
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M5 12h14m-5-5l5 5-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" />
+          </svg>
+        </a>
+      </div>
+
+      <button class="burger" id="burger" aria-label="Меню" aria-expanded="false" aria-controls="nav-links">
+        <span></span><span></span>
+      </button>
+    </div>
+    <!-- Backdrop под открытым мобильным меню. Клик закрывает меню. -->
+    <div class="nav-backdrop" id="nav-backdrop" aria-hidden="true"></div>
+  </header>
+
+  <!-- ═══ HERO ═══ -->
+  <section id="top" class="hero">
+    <div class="hero-wrap">
+
+      <!-- Портрет слева -->
+      <div class="hero-photo" data-reveal>
+        <div class="photo-frame">
+          <img src="assets/portrait.jpg" width="743" height="1000" fetchpriority="high" decoding="async"
+            alt="Иннокентий Седунов — звукорежиссёр Subbox Records" />
+          <span class="ptag ptag-top">
+            <span class="breathe" aria-hidden="true"></span>
+            Subbox Records · SPb
+          </span>
+          <span class="ptag ptag-bot">
+            <em>Иннокентий Седунов</em>
+            <small>sound&nbsp;engineer</small>
+          </span>
+          <span class="ptag ptag-side">
+            <span>с 2021 · 200+ релизов</span>
+          </span>
+        </div>
+      </div>
+
+      <!-- Текст справа -->
+      <div class="hero-text">
+
+        <h1 class="hero-h1">
+          Свожу треки, которые <br class="br-desk" />
+          <em>слушают до&nbsp;конца</em>
+          <span class="hero-h1-tail">
+            <svg viewBox="0 0 120 28" aria-hidden="true">
+              <path d="M2 20 Q30 4 60 14 T118 10" stroke="currentColor" stroke-width="2" fill="none"
+                stroke-linecap="round" />
+            </svg>
+          </span>
+        </h1>
+
+        <p class="hero-lede">
+          Часть команды <a href="#about" class="link-u">Subbox Records</a> в&nbsp;Санкт-Петербурге. Сведение, мастеринг
+          и&nbsp;запись вокала с&nbsp;2021&nbsp;года. Более&nbsp;200 выпущенных треков, попадания
+          в&nbsp;редакторские плейлисты.
+        </p>
+
+        <div class="hero-cta">
+          <a href="#contact" class="btn btn-primary btn-lg">
+            <span>Обсудить проект</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M5 12h14m-5-5l5 5-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </a>
+          <a href="#work" class="btn-text">
+            Послушать работы
+            <svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true">
+              <path fill="currentColor" d="M8 5v14l11-7z" />
+            </svg>
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="hero-clients">
+      <div class="clients-label">Работал с</div>
+      <div class="clients-tape" aria-hidden="true">
+        <div class="tape-track">
+          <span>Крип-А-Крип</span><i>·</i>
+          <span>Мистер Малой</span><i>·</i>
+          <span>Казян</span><i>·</i>
+          <span>White P</span><i>·</i>
+          <span>SLEPA</span><i>·</i>
+          <span>Крип-А-Крип</span><i>·</i>
+          <span>Мистер Малой</span><i>·</i>
+          <span>Казян</span><i>·</i>
+          <span>White P</span><i>·</i>
+          <span>SLEPA</span><i>·</i>
+          <span>Крип-А-Крип</span><i>·</i>
+          <span>Мистер Малой</span><i>·</i>
+          <span>Казян</span><i>·</i>
+          <span>White P</span><i>·</i>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ STRIP · обновлённая статистика (4 метрики, симметричные) ═══ -->
+  <section class="strip">
+    <div class="strip-wrap">
+      <div class="strip-item">
+        <div class="strip-num">2019</div>
+        <div class="strip-label">первый релиз<br />в&nbsp;индустрии</div>
+      </div>
+      <div class="strip-item">
+        <div class="strip-num">200+</div>
+        <div class="strip-label">треков<br />на&nbsp;стримингах</div>
+      </div>
+      <div class="strip-item">
+        <div class="strip-num">✓</div>
+        <div class="strip-label">попадания<br />в&nbsp;редакторские&nbsp;плейлисты</div>
+      </div>
+      <div class="strip-item">
+        <div class="strip-num">72%</div>
+        <div class="strip-label">клиентов<br />возвращаются</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ ABOUT · чистый, без фото студии ═══ -->
+  <section id="about" class="section section-about">
+    <div class="wrap">
+      <header class="head" data-reveal>
+        <div class="head-meta">
+          <span class="head-no">01 / обо мне</span>
+          <h2>Недавно переехал в&nbsp;Питер и&nbsp;стал частью<br /><em>Subbox Records</em>.</h2>
+        </div>
+        <p class="head-lede">Команда, студия, атмосфера и&nbsp;звук — всё настроено так, чтобы артисту хотелось остаться
+          в&nbsp;сессии на&nbsp;пару часов дольше запланированного.</p>
+      </header>
+
+      <div class="about-grid">
+        <div class="about-col" data-reveal>
+          <p class="about-p">Звукорежиссёр и&nbsp;продюсер. Работаю в&nbsp;полном цикле аудио-продакшна: запись,
+            сведение, мастеринг и&nbsp;саунд-дизайн для&nbsp;видео. В&nbsp;студийном сведении&nbsp;— хип-хоп
+            и&nbsp;электроника, в&nbsp;записи&nbsp;— хоровые коллективы и&nbsp;вокал.</p>
+          <p class="about-p">С&nbsp;февраля&nbsp;2026&nbsp;— в&nbsp;команде <b>Subbox Records</b>
+            в&nbsp;Санкт-Петербурге. Гибридный аналогово-цифровой сетап: <b>SPL&nbsp;MixDream</b>,
+            <b>SSL&nbsp;Fusion</b> и&nbsp;<b>Universal&nbsp;Audio&nbsp;Apollo&nbsp;x8p</b>.</p>
+          <p class="about-p">Сотрудничал с&nbsp;телеканалом «Жить», Государственным Кремлёвским Дворцом,
+            Little&nbsp;Spot&nbsp;Productions&nbsp;(США), Троице-Сергиевой Лаврой и&nbsp;Московской духовной академией.</p>
+
+          <div class="about-cta">
+            <a href="#contact" class="btn btn-primary">Записаться в&nbsp;студию</a>
+            <a href="https://t.me/Blindfo1d" target="_blank" rel="noopener" class="btn btn-outline">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path
+                  d="M12 0C5.37 0 0 5.37 0 12s5.37 12 12 12 12-5.37 12-12S18.63 0 12 0zm5.9 8.11l-1.97 9.28c-.15.66-.54.82-1.09.51l-3.02-2.23-1.46 1.4c-.16.16-.3.3-.61.3l.22-3.08 5.62-5.08c.24-.22-.05-.34-.38-.12L8.3 13.15 4.8 12.05c-.76-.24-.77-.76.16-1.13l13.7-5.29c.63-.24 1.18.14.98 1.48z" />
+              </svg>
+              Написать в&nbsp;Telegram
+            </a>
+          </div>
+        </div>
+
+        <div class="about-col" data-reveal>
+          <div class="studio-meta">
+            <div class="meta-head">
+              <span class="head-no">tech&nbsp;sheet</span>
+              <span>Subbox Records · SPb</span>
+            </div>
+            <div class="meta-row">
+              <span class="meta-k">Мониторинг</span>
+              <span class="meta-v">Adam A8X + Sub 8 · KRK 7000b</span>
+            </div>
+            <div class="meta-row">
+              <span class="meta-k">Микрофоны</span>
+              <span class="meta-v">Neumann M49 · Telefunken e251 · UA Sphere DLX · Shure SM7B</span>
+            </div>
+            <div class="meta-row">
+              <span class="meta-k">Канал записи</span>
+              <span class="meta-v">Avalon VT-737SP</span>
+            </div>
+            <div class="meta-row">
+              <span class="meta-k">Суммирование</span>
+              <span class="meta-v">SPL MixDream 2384 · SSL Fusion · SSL The&nbsp;Bus+</span>
+            </div>
+            <div class="meta-row">
+              <span class="meta-k">Конверсия</span>
+              <span class="meta-v">UAD Apollo x8p · UA Satellite · Lavry AD122-96</span>
+            </div>
+            <div class="meta-row">
+              <span class="meta-k">Продакшн</span>
+              <span class="meta-v">Roli Seaboard Rise 45 · Arturia KeyLab 88 mkII</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--
+  ═══ MANIFESTO · компактный 2-колоночный блок ═══
+  Слева: подпись + цитата (короче) + автор.
+  Справа: живой waveform-визуал на canvas (как "видео" из кода),
+  вертикальный, не «плывёт» за текстом.
+-->
+  <section id="manifesto" class="manifesto" data-reveal>
+    <div class="manifesto-inner">
+
+      <!-- ЛЕВАЯ КОЛОНКА: текст -->
+      <div class="manifesto-text">
+        <div class="manifesto-eyebrow">
+          <span class="breathe" aria-hidden="true"></span>
+          <span>/ рабочее правило</span>
+        </div>
+
+        <!--
+        Оригинальный манифест. Каждое слово — <span> с CSS переменной --i
+        (индекс), которая даёт последовательное появление. Ключевые фразы
+        помечены data-hl — подсвечиваются lime и подчёркиваются.
+        <br data-br> — маркер переноса строки между двумя половинами цитаты.
+      -->
+        <blockquote class="manifesto-quote" id="manifesto-quote">
+          <p>
+            <span>Премиальное</span>
+            <span>железо —</span>
+            <span>это</span>
+            <span data-hl>только&nbsp;половина</span>
+            <span>успеха.</span>
+            <br data-br />
+            <span>Вторая</span>
+            <span>половина —</span>
+            <span>то,</span>
+            <span data-hl>как ты чувствуешь себя</span>
+            <span>во&nbsp;время</span>
+            <span>записи.</span>
+          </p>
+        </blockquote>
+
+        <div class="manifesto-foot">
+          <div class="manifesto-sign">— Иннокентий Седунов</div>
+          <div class="manifesto-tag">Subbox Records · 2026</div>
+        </div>
+      </div>
+
+      <!-- ПРАВАЯ КОЛОНКА: canvas waveform (живое "видео" из кода) -->
+      <div class="manifesto-visual" aria-hidden="true">
+        <div class="mvis-frame">
+          <canvas id="manifesto-waves" class="manifesto-waves"></canvas>
+          <!-- Overlay-метки как в студийной DAW -->
+          <div class="mvis-label mvis-label-tl">
+            <span class="breathe"></span>
+            <span>REC · 48 kHz / 24 bit</span>
+          </div>
+          <div class="mvis-label mvis-label-br">
+            <span id="mvis-time">00:03:14</span>
+          </div>
+          <div class="mvis-gridline"></div>
+          <div class="mvis-gridline"></div>
+          <div class="mvis-gridline"></div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══ SCROLLER · kinetic marquee ═══ -->
+  <div class="scroller" aria-hidden="true">
+    <div class="scroller-track">
+      <span>Сведение</span><i class="scroller-dot"></i>
+      <span>Мастеринг для&nbsp;стриминга</span><i class="scroller-dot"></i>
+      <span>Запись вокала</span><i class="scroller-dot"></i>
+      <span>Саунд-дизайн</span><i class="scroller-dot"></i>
+      <span>Подкасты</span><i class="scroller-dot"></i>
+      <span>Сведение</span><i class="scroller-dot"></i>
+      <span>Мастеринг для&nbsp;стриминга</span><i class="scroller-dot"></i>
+      <span>Запись вокала</span><i class="scroller-dot"></i>
+      <span>Саунд-дизайн</span><i class="scroller-dot"></i>
+      <span>Подкасты</span><i class="scroller-dot"></i>
+    </div>
+  </div>
+
+  <!-- ═══ WORK ═══ -->
+  <section id="work" class="section section-work" aria-label="Портфолио работ">
+    <div class="wrap">
+      <header class="head" data-reveal>
+        <div class="head-meta">
+          <span class="head-no">02 / работы</span>
+          <h2>Шесть треков<br />из <em>недавних</em>.</h2>
+        </div>
+        <p class="head-lede">Послушайте как звучит материал «до» и «после». Переключайте версии прямо в плеере.</p>
+      </header>
+    </div>
+
+    <div class="wrap">
+      <div class="home-works" data-reveal>
+        <div class="ab-grid" id="home-ab"></div>
+        <div class="player player-list" id="home-list" aria-label="Плеер: недавние работы">
+          <ol class="tracklist" id="home-tracks"></ol>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="listen">
+    <div class="wrap">
+      <div class="listen-head">
+        <div class="listen-meta">
+          <span class="listen-label">/ слушать</span>
+        </div>
+      </div>
+
+      <div class="listen-grid" aria-label="Стриминговые площадки">
+        <a class="listen-card" href="https://open.spotify.com/artist/3RilyNhvW0SGsc8zUoy0r9" target="_blank" rel="noopener"
+          style="--brand:#1DB954">
+          <img class="listen-ico" src="assets/platforms/spotify.svg" width="20" height="20" alt="" loading="lazy" />
+          <span class="listen-name">Spotify</span>
+          <svg class="listen-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M7 17L17 7M9 7h8v8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+              stroke-linejoin="round" />
+          </svg>
+        </a>
+        <a class="listen-card" href="https://music.apple.com/ru/artist/blindfo1d/1685652894" target="_blank" rel="noopener"
+          style="--brand:#FA586A">
+          <img class="listen-ico" src="assets/platforms/apple-music.svg" width="20" height="20" alt=""
+            loading="lazy" />
+          <span class="listen-name">Apple Music</span>
+          <svg class="listen-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M7 17L17 7M9 7h8v8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+              stroke-linejoin="round" />
+          </svg>
+        </a>
+        <a class="listen-card" href="https://music.yandex.ru/artist/19194427" target="_blank" rel="noopener"
+          style="--brand:#FFCC00">
+          <img class="listen-ico" src="assets/platforms/yandex-music.svg" width="20" height="20" alt=""
+            loading="lazy" />
+          <span class="listen-name">Яндекс Музыка</span>
+          <svg class="listen-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M7 17L17 7M9 7h8v8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+              stroke-linejoin="round" />
+          </svg>
+        </a>
+        <a class="listen-card" href="https://vk.ru/artist/6191187971404942349" target="_blank" rel="noopener" style="--brand:#0077FF">
+          <img class="listen-ico" src="assets/platforms/vk-music.svg" width="20" height="20" alt="" loading="lazy" />
+          <span class="listen-name">VK Музыка</span>
+          <svg class="listen-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M7 17L17 7M9 7h8v8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+              stroke-linejoin="round" />
+          </svg>
+        </a>
+        <a class="listen-card" href="https://www.deezer.com/fr/artist/212033257" target="_blank" rel="noopener" style="--brand:#A238FF">
+          <img class="listen-ico" src="assets/platforms/deezer.svg" width="20" height="20" alt="" loading="lazy" />
+          <span class="listen-name">Deezer</span>
+          <svg class="listen-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M7 17L17 7M9 7h8v8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+              stroke-linejoin="round" />
+          </svg>
+        </a>
+        <a class="listen-card" href="https://zvuk.com/artist/212485348?utm_referrer=https%3a%2f%2fyandex.ru%2f" target="_blank" rel="noopener" style="--brand:#F5F5F2">
+          <img class="listen-ico" src="assets/platforms/zvuk.svg" width="20" height="20" alt="" loading="lazy" />
+          <span class="listen-name">Звук</span>
+          <svg class="listen-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M7 17L17 7M9 7h8v8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+              stroke-linejoin="round" />
+          </svg>
+        </a>
+        <a class="listen-card" href="https://music.mts.ru/artist/19194427" target="_blank" rel="noopener" style="--brand:#FF0032">
+          <img class="listen-ico" src="assets/platforms/mts.svg" width="20" height="20" alt="" loading="lazy" />
+          <span class="listen-name">МТС Музыка</span>
+          <svg class="listen-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M7 17L17 7M9 7h8v8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+              stroke-linejoin="round" />
+          </svg>
+        </a>
+        <a class="listen-card" href="https://www.shazam.com/artist/blindfo1d/1685652894" target="_blank" rel="noopener" style="--brand:#0088FF">
+          <img class="listen-ico" src="assets/platforms/shazam.svg" width="20" height="20" alt="" loading="lazy" />
+          <span class="listen-name">Shazam</span>
+          <svg class="listen-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M7 17L17 7M9 7h8v8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+              stroke-linejoin="round" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!--
+  ═══ SERVICES ═══
+  Hero-карточка "Сведение" теперь содержит МИНИ-DAW MIXER:
+  6 каналов (Kick/Snare/Bass/Vox/Gtr/Mstr) с живыми осциллограммами,
+  pan-индикаторами и LED-метрами. Это визуальная метафора процесса сведения.
+-->
+  <section id="services" class="section">
+    <div class="wrap">
+      <header class="head" data-reveal>
+        <div class="head-meta">
+          <span class="head-no">03 / услуги</span>
+          <h2>Четыре направления.<br /><em>Один стандарт</em> — звук уровня релиза.</h2>
+        </div>
+        <p class="head-lede">Беру проекты в работу только после прослушивания материала. Если не подходит — говорю сразу
+          и рекомендую коллегу.</p>
+      </header>
+
+      <div class="svc-grid">
+        <!-- Hero-карточка: Сведение + встроенный mini-mixer -->
+        <article class="svc-hero" data-reveal>
+          <div class="svc-head">
+            <span class="svc-no">/01</span>
+            <span class="svc-price">от <b>15 000&nbsp;₽</b> / трек</span>
+          </div>
+          <h3 class="svc-title">Сведение</h3>
+          <p class="svc-desc">Проработка баланса, глубины и&nbsp;характера трека. Не&nbsp;просто «громко и&nbsp;чисто» —
+            а&nbsp;звучание, которое совпадает с&nbsp;референсом артиста. Hybrid-сетап: SSL&nbsp;Fusion +
+            UAD&nbsp;Apollo&nbsp;x8p.</p>
+
+          <ul class="svc-checklist">
+            <li><span>01</span>До 80&nbsp;дорожек в&nbsp;пакете</li>
+            <li><span>02</span>3&nbsp;раунда правок без доплаты</li>
+            <li><span>03</span>Stem-выгрузка по&nbsp;запросу</li>
+            <li><span>04</span>Срок 5–7&nbsp;рабочих дней</li>
+          </ul>
+
+          <!--
+          Mini DAW Mixer. 6 каналов. Оживляется в main.js → initMixer().
+          Структура канала:
+            .mix-ch
+              .mix-ch-label   — имя (KICK, SNARE, BASS, VOX, GTR, MSTR)
+              .mix-ch-wave    — bars эквалайзера (живая анимация)
+              .mix-ch-pan     — слайдер L←→R с точкой
+              .mix-ch-meter   — LED столбик уровня
+        -->
+          <div class="mix-session" aria-hidden="true" id="mix-session">
+            <div class="mix-head">
+              <span>session / subbox_master.ptx</span>
+              <span class="mix-status">
+                <span class="breathe"></span>
+                REC / 48 kHz · 24 bit
+              </span>
+            </div>
+
+            <div class="mix-ch" data-ch="kick" data-pan="0">
+              <span class="mix-ch-label">KICK</span>
+              <div class="mix-ch-wave"></div>
+              <div class="mix-ch-pan"><i></i></div>
+              <div class="mix-ch-meter"><span></span></div>
+              <span class="mix-ch-db">-6.2</span>
+            </div>
+
+            <div class="mix-ch" data-ch="snare" data-pan="0.15">
+              <span class="mix-ch-label">SNR</span>
+              <div class="mix-ch-wave"></div>
+              <div class="mix-ch-pan"><i></i></div>
+              <div class="mix-ch-meter"><span></span></div>
+              <span class="mix-ch-db">-8.4</span>
+            </div>
+
+            <div class="mix-ch" data-ch="bass" data-pan="-0.1">
+              <span class="mix-ch-label">BASS</span>
+              <div class="mix-ch-wave"></div>
+              <div class="mix-ch-pan"><i></i></div>
+              <div class="mix-ch-meter"><span></span></div>
+              <span class="mix-ch-db">-4.8</span>
+            </div>
+
+            <div class="mix-ch" data-ch="vox" data-pan="0">
+              <span class="mix-ch-label">VOX</span>
+              <div class="mix-ch-wave"></div>
+              <div class="mix-ch-pan"><i></i></div>
+              <div class="mix-ch-meter"><span></span></div>
+              <span class="mix-ch-db">-3.1</span>
+            </div>
+
+            <div class="mix-ch" data-ch="gtr" data-pan="-0.35">
+              <span class="mix-ch-label">GTR</span>
+              <div class="mix-ch-wave"></div>
+              <div class="mix-ch-pan"><i></i></div>
+              <div class="mix-ch-meter"><span></span></div>
+              <span class="mix-ch-db">-9.6</span>
+            </div>
+
+            <div class="mix-ch mix-ch-master" data-ch="master" data-pan="0">
+              <span class="mix-ch-label">MSTR</span>
+              <div class="mix-ch-wave"></div>
+              <div class="mix-ch-pan"><i></i></div>
+              <div class="mix-ch-meter"><span></span></div>
+              <span class="mix-ch-db">-1.8</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Правая колонка: 3 компактные карточки -->
+        <div class="svc-stack">
+          <article class="svc-mini" data-reveal>
+            <div class="svc-head">
+              <span class="svc-no">/02</span>
+              <span class="svc-price">от <b>5 000&nbsp;₽</b></span>
+            </div>
+            <h3>Мастеринг</h3>
+            <p>Финальная обработка с&nbsp;учётом требований Apple Music (−16&nbsp;LUFS), Spotify (−14&nbsp;LUFS), Tidal
+              и&nbsp;физ. релизов.</p>
+            <div class="svc-tags">
+              <span>Stereo / Stem</span>
+              <span>LUFS под платформу</span>
+              <span>DDP для CD</span>
+            </div>
+          </article>
+
+          <article class="svc-mini" data-reveal>
+            <div class="svc-head">
+              <span class="svc-no">/03</span>
+              <span class="svc-price">от <b>2 000&nbsp;₽</b>/час</span>
+            </div>
+            <h3>Запись вокала</h3>
+            <p>Студия Subbox или удалённая сессия с&nbsp;коррекцией тональности и&nbsp;разбором дикции.</p>
+            <div class="svc-tags">
+              <span>Neumann M49</span>
+              <span>Telefunken e251</span>
+              <span>Melodyne</span>
+            </div>
+          </article>
+
+          <article class="svc-mini" data-reveal>
+            <div class="svc-head">
+              <span class="svc-no">/04</span>
+              <span class="svc-price">от <b>10 000&nbsp;₽</b></span>
+            </div>
+            <h3>Саунд-дизайн&nbsp;/&nbsp;подкасты</h3>
+            <p>Ролики, трейлеры, подкасты «под&nbsp;ключ», игровой UI. От&nbsp;30-секундного SFX до&nbsp;полного
+              эпизода.</p>
+            <div class="svc-tags">
+              <span>Реклама</span>
+              <span>Подкасты</span>
+              <span>UI-звук</span>
+              <span>Фоли</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ PROCESS ═══ -->
+  <section id="process" class="section section-dark">
+    <div class="wrap">
+      <header class="head" data-reveal>
+        <div class="head-meta">
+          <span class="head-no">04 / процесс</span>
+          <h2>Пять шагов. <em>Прозрачно</em><br />и без сюрпризов.</h2>
+        </div>
+        <p class="head-lede">Каждый этап зафиксирован в договоре. Вы видите превью в процессе, правки обсуждаются
+          голосом или текстом — как удобно.</p>
+      </header>
+
+      <ol class="steps">
+        <li class="step" data-reveal>
+          <div class="step-num">01</div>
+          <div class="step-title">Заявка &amp; бриф</div>
+          <div class="step-body">
+            <p>Пишете в&nbsp;Telegram <b>@Blindfo1d</b> или форму. Присылаете сырые дорожки и&nbsp;2–3 референса.
+              Отвечаю в&nbsp;день обращения.</p>
+          </div>
+          <div class="step-time">тот&nbsp;же день</div>
+        </li>
+        <li class="step" data-reveal>
+          <div class="step-num">02</div>
+          <div class="step-title">Прослушивание</div>
+          <div class="step-body">
+            <p>Слушаю ваш материал и&nbsp;референсы, обсуждаем задачу, сроки и&nbsp;итоговое звучание.
+              Говорю честно, что можно улучшить.</p>
+          </div>
+          <div class="step-time">1–2&nbsp;дня</div>
+        </li>
+        <li class="step" data-reveal>
+          <div class="step-num">03</div>
+          <div class="step-title">Договор &amp; предоплата</div>
+          <div class="step-body">
+            <p>Простой договор на&nbsp;1,5&nbsp;страницы. Предоплата 50%. Фиксируем сроки, количество правок и&nbsp;дату
+              релиза.</p>
+          </div>
+          <div class="step-time">15&nbsp;минут</div>
+        </li>
+        <li class="step" data-reveal>
+          <div class="step-num">04</div>
+          <div class="step-title">Сведение &amp; правки</div>
+          <div class="step-body">
+            <p>Работаю 5–7&nbsp;дней. Присылаю превью на&nbsp;3-й день, принимаю до&nbsp;3 раундов правок — без
+              ограничений на&nbsp;уточнения.</p>
+          </div>
+          <div class="step-time">5–7&nbsp;дней</div>
+        </li>
+        <li class="step" data-reveal>
+          <div class="step-num">05</div>
+          <div class="step-title">Мастеринг &amp; релиз</div>
+          <div class="step-body">
+            <p>Финал под все платформы + архивные WAV. Доплата по&nbsp;факту получения. Выгружаю в&nbsp;ваш Google Drive
+              или напрямую на&nbsp;DistroKid/Believe.</p>
+          </div>
+          <div class="step-time">1–2&nbsp;дня</div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ═══ PRICING ═══ -->
+  <section id="pricing" class="section">
+    <div class="wrap">
+      <header class="head" data-reveal>
+        <div class="head-meta">
+          <span class="head-no">05 / цены</span>
+          <h2>Фиксированные пакеты<br />без <em>скрытых платежей</em>.</h2>
+        </div>
+        <p class="head-lede">Три готовых пакета. Нужно что-то ещё — индивидуальный расчёт в&nbsp;тот&nbsp;же день.</p>
+      </header>
+
+      <div class="price-grid">
+        <article class="price" data-reveal>
+          <div class="price-top">
+            <div class="price-name">Single</div>
+            <div class="price-meta">1 трек · 5–7 дней</div>
+          </div>
+          <div class="price-big">
+            <span class="price-num">20 000</span>
+            <span class="price-cur">₽</span>
+          </div>
+          <ul class="price-list">
+            <li>Сведение до&nbsp;80&nbsp;дорожек</li>
+            <li>Стерео-мастеринг под стриминг</li>
+            <li>3&nbsp;раунда правок</li>
+            <li>Архивные WAV + DDP</li>
+          </ul>
+          <a href="#contact" class="btn btn-outline btn-block" data-package="Single">Выбрать Single</a>
+        </article>
+
+        <article class="price price-best" data-reveal>
+          <div class="price-badge">
+            <span class="breathe" aria-hidden="true"></span>
+            Выгодно · −15%
+          </div>
+          <div class="price-top">
+            <div class="price-name">EP</div>
+            <div class="price-meta">до 5 треков · 2–3 недели</div>
+          </div>
+          <div class="price-big">
+            <span class="price-num">85 000</span>
+            <span class="price-cur">₽</span>
+          </div>
+          <ul class="price-list">
+            <li>Единое звуковое ядро EP</li>
+            <li>Сведение + Stem-мастеринг</li>
+            <li>Без лимита на&nbsp;правки</li>
+            <li>Приоритетная очередь</li>
+            <li>Подготовка к&nbsp;релизу на&nbsp;DSP</li>
+          </ul>
+          <a href="#contact" class="btn btn-primary btn-block" data-package="EP">Выбрать EP</a>
+        </article>
+
+        <article class="price price-custom" data-reveal>
+          <div class="price-top">
+            <div class="price-name">Album / Custom</div>
+            <div class="price-meta">от&nbsp;8&nbsp;треков</div>
+          </div>
+          <p>Полный продакшн альбома от&nbsp;160&nbsp;000&nbsp;₽ или нестандартные задачи (саунд для&nbsp;бренда,
+            перевыпуск каталога) — считаю индивидуально в&nbsp;день обращения.</p>
+          <a href="#contact" class="btn-text" data-package="Album / Custom">
+            Обсудить проект
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M5 12h14m-5-5l5 5-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ REVIEWS ═══ -->
+  <section id="reviews" class="section">
+    <div class="wrap">
+      <header class="head" data-reveal>
+        <div class="head-meta">
+          <span class="head-no">06 / что говорят</span>
+          <h2>Отзывы артистов,<br />с&nbsp;которыми <em>работал</em>.</h2>
+        </div>
+      </header>
+
+      <div class="reviews">
+        <blockquote class="review" data-reveal>
+          <div class="review-stars" aria-hidden="true">★★★★★</div>
+          <p>«Иннокентий вывел трек на&nbsp;уровень, которого я&nbsp;боялась от&nbsp;себя ожидать. После его сведения
+            “Окнами на&nbsp;север” попал в&nbsp;редакторский плейлист Apple Music на&nbsp;следующей неделе после
+            релиза.»</p>
+          <footer>
+            <div class="rev-avatar" style="--hue: 86">ДР</div>
+            <div>
+              <div class="rev-name">Дарья Рипп</div>
+              <div class="rev-role">певица · indie-pop · 142&nbsp;K&nbsp;слушателей</div>
+            </div>
+          </footer>
+        </blockquote>
+
+        <blockquote class="review" data-reveal>
+          <div class="review-stars" aria-hidden="true">★★★★★</div>
+          <p>«Работал с&nbsp;14&nbsp;разными инженерами. Иннокентий — тот редкий случай, когда сведение звучит как
+            задумывалось в&nbsp;голове, а&nbsp;не&nbsp;как „по&nbsp;ТЗ”.»</p>
+          <footer>
+            <div class="rev-avatar" style="--hue: 15">МВ</div>
+            <div>
+              <div class="rev-name">Максим Ворон</div>
+              <div class="rev-role">продюсер · hip-hop</div>
+            </div>
+          </footer>
+        </blockquote>
+
+        <blockquote class="review" data-reveal>
+          <div class="review-stars" aria-hidden="true">★★★★★</div>
+          <p>«Записывались в&nbsp;Subbox — атмосфера именно такая, какую описывают. Барабаны физические, вокал дышит,
+            ничего не&nbsp;торчит. Звучит как западный релиз.»</p>
+          <footer>
+            <div class="rev-avatar" style="--hue: 200">КЭ</div>
+            <div>
+              <div class="rev-name">Кирилл «Echo»</div>
+              <div class="rev-role">The Pulse Band · alt-rock</div>
+            </div>
+          </footer>
+        </blockquote>
+
+        <blockquote class="review" data-reveal>
+          <div class="review-stars" aria-hidden="true">★★★★★</div>
+          <p>«Нашли Иннокентия по&nbsp;рекомендации, хотели просто свести один трек. В&nbsp;итоге делаем с&nbsp;ним весь
+            альбом — он&nbsp;слышит песню, а&nbsp;не&nbsp;отдельные дорожки.»</p>
+          <footer>
+            <div class="rev-avatar" style="--hue: 320">ЮТ</div>
+            <div>
+              <div class="rev-name">Юлия Тодер</div>
+              <div class="rev-role">лейбл «Мерцание»</div>
+            </div>
+          </footer>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ FAQ ═══ -->
+  <section id="faq" class="section section-alt" aria-label="Часто задаваемые вопросы">
+    <div class="wrap wrap-narrow">
+      <header class="head head-stacked" data-reveal>
+        <span class="head-no">07 / вопросы</span>
+        <h2>Часто <em>спрашивают</em>.</h2>
+      </header>
+
+      <div class="faq" data-reveal>
+        <details class="faq-row">
+          <summary>
+            <span>Можно прийти в&nbsp;студию очно?</span>
+            <span class="faq-sign" aria-hidden="true"></span>
+          </summary>
+          <div class="faq-ans">Конечно. Subbox Records в&nbsp;Петербурге открыт для&nbsp;артистов
+            по&nbsp;предварительной записи. Очные сессии сведения приветствуются — бывает важно сверить звучание
+            в&nbsp;реальной студийной акустике.</div>
+        </details>
+        <details class="faq-row">
+          <summary>
+            <span>В&nbsp;каком формате присылать материал?</span>
+            <span class="faq-sign" aria-hidden="true"></span>
+          </summary>
+          <div class="faq-ans">WAV 24&nbsp;bit / 44.1 или 48&nbsp;kHz, раскладка по&nbsp;дорожкам в&nbsp;zip. Если есть
+            стемы — отлично, если&nbsp;нет — сведу сам. Референсы в&nbsp;MP3 тоже пойдут.</div>
+        </details>
+        <details class="faq-row">
+          <summary>
+            <span>Работаете удалённо? Я&nbsp;не&nbsp;в&nbsp;Питере.</span>
+            <span class="faq-sign" aria-hidden="true"></span>
+          </summary>
+          <div class="faq-ans">90% проектов — удалённо. За&nbsp;последний год артисты были из&nbsp;Берлина, Тбилиси,
+            Новосибирска, Лос-Анджелеса. Файлы через WeTransfer или Dropbox, созвоны по&nbsp;Zoom или Telegram.</div>
+        </details>
+        <details class="faq-row">
+          <summary>
+            <span>Что&nbsp;если мне не&nbsp;понравится финальный микс?</span>
+            <span class="faq-sign" aria-hidden="true"></span>
+          </summary>
+          <div class="faq-ans">В&nbsp;стандартном пакете у&nbsp;вас 3&nbsp;раунда правок. Если после третьего
+            мы&nbsp;не&nbsp;пришли к&nbsp;общему звучанию — я&nbsp;возвращаю 100% предоплаты. За&nbsp;11&nbsp;лет работы
+            это случилось дважды.</div>
+        </details>
+        <details class="faq-row">
+          <summary>
+            <span>Оплата — как&nbsp;и&nbsp;можно&nbsp;ли безналом?</span>
+            <span class="faq-sign" aria-hidden="true"></span>
+          </summary>
+          <div class="faq-ans">Переводом на&nbsp;карту, по&nbsp;СБП, в&nbsp;криптe (USDT) или на&nbsp;р/с ИП
+            с&nbsp;закрывающими документами. НДС&nbsp;не&nbsp;выделяется — работаю по&nbsp;УСН.</div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ CONTACT ═══ -->
+  <section id="contact" class="section section-contact" aria-label="Форма связи">
+    <div class="wrap contact-wrap">
+      <div class="contact-left" data-reveal>
+        <span class="head-no">08 / связаться</span>
+        <h2 class="contact-h2">
+          Пришлите трек —<br />
+          <em>послушаю сегодня.</em>
+        </h2>
+        <p class="contact-sub">Отвечаю быстро — обычно в&nbsp;день обращения.
+        </p>
+
+        <div class="contact-ways">
+          <a class="cway cway-primary" href="https://t.me/Blindfo1d" target="_blank" rel="noopener">
+            <span class="cway-k">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path
+                  d="M12 0C5.37 0 0 5.37 0 12s5.37 12 12 12 12-5.37 12-12S18.63 0 12 0zm5.9 8.11l-1.97 9.28c-.15.66-.54.82-1.09.51l-3.02-2.23-1.46 1.4c-.16.16-.3.3-.61.3l.22-3.08 5.62-5.08c.24-.22-.05-.34-.38-.12L8.3 13.15 4.8 12.05c-.76-.24-.77-.76.16-1.13l13.7-5.29c.63-.24 1.18.14.98 1.48z" />
+              </svg>
+              Связаться
+            </span>
+            <span class="cway-v">@Blindfo1d</span>
+            <svg class="cway-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M7 17L17 7M9 7h8v8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </a>
+          <a class="cway" href="mailto:sedunov@musent.ru">
+            <span class="cway-k">Email</span>
+            <span class="cway-v">sedunov@musent.ru</span>
+            <svg class="cway-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M7 17L17 7M9 7h8v8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </a>
+          <a class="cway" href="#about">
+            <span class="cway-k">Студия</span>
+            <span class="cway-v">Subbox Records · SPb</span>
+            <svg class="cway-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M7 17L17 7M9 7h8v8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <form class="contact-form" id="contact-form" data-reveal name="contact" method="POST" data-netlify="true"
+        netlify-honeypot="bot-field">
+        <!-- Netlify Forms: обязательное скрытое поле + honeypot от спама -->
+        <input type="hidden" name="form-name" value="contact" />
+        <p hidden aria-hidden="true"><label>Не заполняйте: <input name="bot-field" tabindex="-1" autocomplete="off" /></label></p>
+        <div class="form-head">
+          <span class="form-head-label">
+            <span class="breathe" aria-hidden="true"></span>
+            Новая заявка
+          </span>
+          <span class="form-head-tag">ответ в&nbsp;тот&nbsp;же день</span>
+        </div>
+
+        <div class="form-stack">
+          <div class="form-row-2">
+            <div class="field">
+              <label for="f-name">Имя <span class="req" aria-hidden="true">*</span></label>
+              <input type="text" id="f-name" name="name" required autocomplete="name" aria-required="true"
+                aria-describedby="f-name-err" placeholder="Как к вам обращаться" />
+              <span class="field-err" id="f-name-err" hidden></span>
+            </div>
+            <div class="field">
+              <label for="f-contact">Telegram или Email <span class="req" aria-hidden="true">*</span></label>
+              <input type="text" id="f-contact" name="contact" required aria-required="true"
+                aria-describedby="f-contact-err f-contact-hint" placeholder="@username или you@mail.com" />
+              <span class="field-hint" id="f-contact-hint">@username, t.me/username или email</span>
+              <span class="field-err" id="f-contact-err" hidden></span>
+            </div>
+          </div>
+
+          <div class="field">
+            <label>Какие услуги интересуют</label>
+            <div class="service-chips">
+              <label><input type="checkbox" name="service" value="mix" checked><span>Сведение</span></label>
+              <label><input type="checkbox" name="service" value="master" checked><span>Мастеринг</span></label>
+              <label><input type="checkbox" name="service" value="both"><span>Сведение + мастеринг</span></label>
+              <label><input type="checkbox" name="service" value="vocal"><span>Запись вокала</span></label>
+              <label><input type="checkbox" name="service" value="sound"><span>Саунд-дизайн</span></label>
+              <label><input type="checkbox" name="service" value="other"><span>Другое</span></label>
+            </div>
+          </div>
+
+          <div class="field">
+            <label>Бюджет&nbsp;<span class="muted">(необязательно)</span></label>
+            <div class="chips">
+              <label><input type="radio" name="budget" value="до 30k"><span>до 30k ₽</span></label>
+              <label><input type="radio" name="budget" value="30–100k" checked><span>30–100k ₽</span></label>
+              <label><input type="radio" name="budget" value="100k+"><span>100k+ ₽</span></label>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="f-message">О&nbsp;проекте&nbsp;<span class="muted">(необязательно)</span></label>
+            <textarea id="f-message" name="message" rows="3" maxlength="800" aria-describedby="f-message-count"
+              placeholder="Жанр, количество треков, дедлайн, референсы…"></textarea>
+            <span class="field-count" id="f-message-count" aria-live="polite">0 / 800</span>
+          </div>
+
+          <!-- Пакет: заполняется автоматически при клике из секции тарифов -->
+          <input type="hidden" name="package" id="f-package" value="" />
+          <div class="form-package-note" id="form-package-note" hidden>
+            <span id="form-package-text"></span>
+            <button type="button" id="package-clear" aria-label="Убрать">✕</button>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-lg btn-block form-submit">
+            <span class="form-submit-label">Отправить заявку</span>
+            <svg class="form-submit-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M5 12h14m-5-5l5 5-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+            <span class="form-submit-spinner" aria-hidden="true"></span>
+          </button>
+          <p class="form-note">Отправляя форму, вы&nbsp;соглашаетесь с&nbsp;<a href="#">политикой обработки данных</a>.
+          </p>
+        </div>
+
+        <!-- Инлайн-успех. Показывается после успешной отправки вместо формы. -->
+        <div class="form-success" id="form-success" hidden>
+          <div class="form-success-ico" aria-hidden="true">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
+              <path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </div>
+          <h3>Заявка отправлена</h3>
+          <p>Отвечу в&nbsp;Telegram <b>@Blindfo1d</b> — обычно в&nbsp;день обращения. Если не&nbsp;получили ответ
+            в&nbsp;течение 24&nbsp;часов, напишите напрямую.</p>
+          <div class="form-success-actions">
+            <a href="https://t.me/Blindfo1d" target="_blank" rel="noopener" class="btn btn-primary">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path
+                  d="M12 0C5.37 0 0 5.37 0 12s5.37 12 12 12 12-5.37 12-12S18.63 0 12 0zm5.9 8.11l-1.97 9.28c-.15.66-.54.82-1.09.51l-3.02-2.23-1.46 1.4c-.16.16-.3.3-.61.3l.22-3.08 5.62-5.08c.24-.22-.05-.34-.38-.12L8.3 13.15 4.8 12.05c-.76-.24-.77-.76.16-1.13l13.7-5.29c.63-.24 1.18.14.98 1.48z" />
+              </svg>
+              Открыть Telegram
+            </a>
+            <button type="button" class="btn btn-outline" id="form-reset">Отправить ещё одну</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer class="foot">
+    <div class="wrap foot-wrap">
+      <div class="foot-brand">
+        <a href="#top" class="brand">
+          <span class="brand-mark"
+            aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></span>
+          <span class="brand-text"><span>Седунов</span><small>/ subbox records</small></span>
+        </a>
+        <p>Санкт-Петербург · Subbox Records.<br />Принимаю 6–8 проектов в&nbsp;месяц.</p>
+      </div>
+      <div class="foot-col">
+        <h4>Разделы</h4>
+        <a href="#about">Обо мне</a>
+        <a href="#work">Работы</a>
+        <a href="#services">Услуги</a>
+        <a href="#pricing">Цены</a>
+        <a href="#faq">Вопросы</a>
+      </div>
+      <div class="foot-col">
+        <h4>Связь</h4>
+        <a href="https://t.me/Blindfo1d" target="_blank" rel="noopener">Telegram @Blindfo1d</a>
+        <a href="mailto:sedunov@musent.ru">sedunov@musent.ru</a>
+        <a href="#contact">Форма заявки</a>
+      </div>
+      <div class="foot-col">
+        <h4>Прочее</h4>
+        <a href="#">Политика данных</a>
+        <a href="#">Договор-оферта</a>
+        <a href="#">Реквизиты ИП</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <div class="wrap foot-bottom-wrap">
+        <span>© 2026 ИП&nbsp;Седунов И.&nbsp;А. · Все права защищены</span>
+        <span>Сведение · мастеринг · запись · Петербург</span>
+      </div>
+    </div>
+  </footer>
+
+  <div id="toast" class="toast" hidden></div>
+
+  <script src="main.js"></script>
+  <script src="works-player.js"></script>
+</body>
+
+</html>

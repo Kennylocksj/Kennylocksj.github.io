@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#0B0B0D" />
+
+  <title>Иннокентий Седунов · Портфолио</title>
+  <meta name="description"
+    content="Композитор, звукорежиссёр и продюсер. Работы для ГКД, телеканала „Жить“, президентских грантов, Little Spot Productions (USA)." />
+
+  <!-- Open Graph. ⚠ Если домен отличается от sedunov.audio — поправьте og:url / og:image. -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Иннокентий Седунов · Портфолио" />
+  <meta property="og:description"
+    content="Композитор, звукорежиссёр и продюсер. Работы для ГКД, телеканала „Жить“, президентских грантов, Little Spot Productions (USA)." />
+  <meta property="og:image" content="https://kennylocksj.github.io/images/sedunov-portfolio.jpg" />
+  <meta property="og:url" content="https://kennylocksj.github.io/portfolio" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="icon"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230B0B0D'/%3E%3Crect x='6' y='13' width='2.5' height='6' fill='%23C3F53C'/%3E%3Crect x='10' y='10' width='2.5' height='12' fill='%23C3F53C'/%3E%3Crect x='14' y='7' width='2.5' height='18' fill='%23C3F53C'/%3E%3Crect x='18' y='11' width='2.5' height='10' fill='%23C3F53C'/%3E%3Crect x='22' y='14' width='2.5' height='4' fill='%23C3F53C'/%3E%3C/svg%3E" />
+  <link rel="preload" as="image" href="/images/sedunov-portfolio.jpg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Montserrat:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Дизайн-система лендинга (не изменяется) + компоненты портфолио -->
+  <link rel="stylesheet" href="../styles.css" />
+  <link rel="stylesheet" href="portfolio.css" />
+</head>
+
+<body class="p-body">
+
+  <a class="skip-link" href="#top">Перейти к содержимому</a>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
+
+  <!-- ═══ NAV ═══ -->
+  <header class="nav" id="nav">
+    <div class="nav-wrap">
+      <a href="#top" class="brand" aria-label="Наверх">
+        <span class="brand-mark" aria-hidden="true">
+          <span></span><span></span><span></span><span></span><span></span>
+        </span>
+        <span class="brand-text">
+          <span>Седунов</span>
+          <small>/ портфолио</small>
+        </span>
+      </a>
+
+      <nav class="nav-links" id="nav-links">
+        <a href="#work">Композиция</a>
+        <a href="#mixing">Сведение</a>
+        <a href="#production">Продакшн</a>
+        <a href="#setup">Сетап</a>
+        <a href="#contact">Контакты</a>
+
+        <div class="nav-mobile-extras" aria-hidden="true">
+          <a href="/" class="nav-mobile-link nav-mobile-tg">
+            <svg class="nav-mobile-link-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M7 17L17 7M9 7h8v8" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+            <span>Услуги</span>
+          </a>
+          <a href="/cv/sedunov-cv.pdf" class="nav-mobile-link nav-mobile-cta" download>
+            <span class="nav-mobile-cta-dot" aria-hidden="true"></span>
+            <span>Скачать резюме</span>
+          </a>
+        </div>
+      </nav>
+
+      <div class="nav-right">
+        <a href="/" class="nav-services" aria-label="Услуги — на главную">Услуги</a>
+      </div>
+
+      <button class="burger" id="burger" aria-label="Меню" aria-expanded="false" aria-controls="nav-links">
+        <span></span><span></span>
+      </button>
+    </div>
+    <div class="nav-backdrop" id="nav-backdrop" aria-hidden="true"></div>
+  </header>
+
+  <!-- ═══ HERO ═══ -->
+  <section id="top" class="p-hero">
+    <div class="wrap p-hero-wrap">
+
+      <div class="p-hero-photo" data-reveal>
+        <div class="photo-frame">
+          <img src="/images/sedunov-portfolio.jpg" width="1707" height="2560" fetchpriority="high" decoding="async"
+            alt="Иннокентий Седунов — композитор и звукорежиссёр" />
+          <span class="p-ptag p-ptag-top">
+            <span class="breathe" aria-hidden="true"></span>
+            Subbox Records · SPb
+          </span>
+          <span class="p-ptag p-ptag-bot">
+            <em>Композитор</em>
+            <small>engineer · producer</small>
+          </span>
+        </div>
+      </div>
+
+      <div class="p-hero-text" data-reveal>
+        <div class="p-hero-eyebrow">
+          <span class="breathe" aria-hidden="true"></span>
+          <span>с 2021 года · Subbox Records, Санкт-Петербург</span>
+        </div>
+
+        <h1 class="p-hero-name">Иннокентий&nbsp;Седунов</h1>
+        <p class="p-hero-role">Композитор&nbsp;· звукорежиссёр&nbsp;· продюсер</p>
+
+        <p class="p-hero-refs">
+          Государственный&nbsp;Кремлёвский&nbsp;Дворец&nbsp;· телеканал&nbsp;«Жить»&nbsp;·
+          президентские&nbsp;гранты&nbsp;· Little&nbsp;Spot&nbsp;Productions&nbsp;(USA)
+        </p>
+
+        <div class="p-hero-cta">
+          <a href="#work" class="btn btn-primary btn-lg">
+            <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
+              <path fill="currentColor" d="M8 5v14l11-7z" />
+            </svg>
+            <span>Слушать работы</span>
+          </a>
+          <a href="/cv/sedunov-cv.pdf" class="btn btn-outline btn-lg" download>
+            Скачать резюме
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══ 01 · КОМПОЗИЦИЯ ═══ -->
+  <section id="work" class="section section-p" aria-label="Композиция">
+    <div class="wrap">
+      <header class="head" data-reveal>
+        <div class="head-meta">
+          <span class="head-no">01 / композиция</span>
+          <h2>Композиция</h2>
+        </div>
+        <p class="head-lede">Оригинальная музыка под пространство и изображение — от ambient-партитур
+          до&nbsp;аудиодекораций для&nbsp;выставок.</p>
+      </header>
+
+      <article class="case" data-reveal>
+        <div class="case-media">
+          <figure class="case-figure" id="ambient-cover" hidden>
+            <img id="ambient-cover-img" src="" alt="" decoding="async" width="1000" height="750" />
+            <figcaption class="case-figcap">Художественная выставка Екатерины Ерохиной · ГКД</figcaption>
+          </figure>
+        </div>
+
+        <div class="case-body">
+          <div class="case-tags">
+            <span class="tag tag-accent">Государственный Кремлёвский Дворец</span>
+            <span class="tag">16 июня 2026</span>
+            <span class="tag">12 композиций</span>
+          </div>
+          <h3 class="case-title">«Путь к свету»</h3>
+          <p class="case-desc">
+            Художественная выставка Екатерины Ерохиной в&nbsp;ГКД. 12&nbsp;оригинальных ambient-композиций —
+            каждая написана как аудиодекорация к&nbsp;отдельной картине выставки.
+          </p>
+
+          <div class="player player-list" id="ambient-player" data-title="Путь к свету — ambient"
+            aria-label="Плеер: 12 ambient-композиций «Путь к свету»">
+            <ol class="tracklist" id="ambient-tracks"></ol>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ═══ 02 · СВЕДЕНИЕ И МАСТЕРИНГ ═══ -->
+  <section id="mixing" class="section section-p section-alt" aria-label="Сведение и мастеринг">
+    <div class="wrap">
+      <header class="head" data-reveal>
+        <div class="head-meta">
+          <span class="head-no">02 / сведение и мастеринг</span>
+          <h2>Сведение <em>и мастеринг</em></h2>
+        </div>
+        <p class="head-lede">Послушайте один и&nbsp;тот&nbsp;же материал «до» и&nbsp;«после». Обе версии выровнены
+          по&nbsp;громкости — разница только в&nbsp;обработке.</p>
+      </header>
+
+      <!-- 2.1 · A/B -->
+      <h3 class="sub-h" data-reveal><span class="sub-h-no">2.1</span> До и&nbsp;после</h3>
+      <div class="ab-grid" id="ab-grid" data-reveal></div>
+
+      <!-- 2.2 · showcase -->
+      <h3 class="sub-h" data-reveal><span class="sub-h-no">2.2</span> Дополнительные работы</h3>
+      <p class="sub-lede" data-reveal>Разные жанры — для&nbsp;демонстрации почерка в&nbsp;сведении.</p>
+      <div class="genre-tabs" id="showcase-tabs" role="group" aria-label="Фильтр по жанру" data-reveal></div>
+      <div class="player player-list showcase" id="showcase-player" aria-label="Плеер: дополнительные работы">
+        <ol class="tracklist" id="showcase-tracks"></ol>
+      </div>
+
+      <p class="note-block" data-reveal>
+        Работаю в&nbsp;Subbox Records с&nbsp;февраля 2026. Гибридный сетап:
+        <b>SPL&nbsp;MixDream</b>, <b>SSL&nbsp;Fusion</b>, <b>UAD&nbsp;Apollo</b>.
+        Сведение и&nbsp;мастеринг проектов разных жанров.
+      </p>
+    </div>
+  </section>
+
+  <!-- ═══ 03 · ПРОДАКШН ═══ -->
+  <section id="production" class="section section-p" aria-label="Продакшн">
+    <div class="wrap">
+      <header class="head" data-reveal>
+        <div class="head-meta">
+          <span class="head-no">03 / продакшн</span>
+          <h2>Продакшн</h2>
+        </div>
+        <p class="head-lede">Запись, саунд-дизайн и&nbsp;постпродакшн — от&nbsp;выездных сессий с&nbsp;хором
+          до&nbsp;телевизионных проектов и&nbsp;грантовых сериалов.</p>
+      </header>
+
+      <div class="prod-grid">
+
+        <!-- Свет Победы · VK -->
+        <article class="prod-card" data-reveal>
+          <div class="video-facade video-vk">
+            <img class="video-poster" src="/images/works/svet-pobedy.png"
+              alt="Промо-ролик «Свет Победы» — телеканал «Жить»" loading="lazy" decoding="async" />
+            <a class="video-play" href="https://vkvideo.ru/video-131498541_456248584" target="_blank" rel="noopener"
+              aria-label="Смотреть «Свет Победы» на VK Video (откроется в новой вкладке)">
+              <span class="video-play-btn" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24"><path fill="currentColor" d="M8 5v14l11-7z" /></svg>
+              </span>
+              <span class="video-play-label">Смотреть на VK</span>
+            </a>
+          </div>
+          <div class="prod-body">
+            <div class="case-tags">
+              <span class="tag tag-accent">телеканал «Жить»</span>
+              <span class="tag">апрель 2025</span>
+              <span class="tag">1,3&nbsp;млн просмотров</span>
+            </div>
+            <h3 class="prod-title">Промо-ролик «Свет Победы»</h3>
+            <p class="prod-desc">
+              1,3&nbsp;млн просмотров на&nbsp;канале с&nbsp;аудиторией 2&nbsp;млн+ подписчиков.
+              Реализовал схему индивидуальной записи 15&nbsp;участников хора вместо групповой сессии —
+              это дало чистоту каждой партии и&nbsp;полный контроль в&nbsp;миксе.
+              Провёл проект от&nbsp;записи до&nbsp;подготовки материала для&nbsp;мастеринга.
+            </p>
+          </div>
+        </article>
+
+        <!-- Лица Академии · YouTube s2 + s3 -->
+        <article class="prod-card prod-card-wide" data-reveal>
+          <div class="prod-body">
+            <div class="case-tags">
+              <span class="tag tag-accent">президентский грант</span>
+              <span class="tag">2022–2025</span>
+              <span class="tag">звукорежиссёр проекта</span>
+            </div>
+            <h3 class="prod-title">«Лица Академии» · сезоны 2 и&nbsp;3</h3>
+            <p class="prod-desc">
+              Отвечал за&nbsp;весь звуковой блок обоих сезонов: подготовка площадок, запись, постпродакшн.
+              Саунд-дизайн для&nbsp;моушн-графики. Реставрация исходников в&nbsp;iZotope&nbsp;RX.
+              Оба сезона поддержаны президентским грантом. Указан в&nbsp;титрах каждого эпизода.
+            </p>
+          </div>
+          <div class="yt-row">
+            <figure class="yt-facade" data-yt="jUE1JI_gii4" data-list="PLtRxWmHLfr5RDFQa5PvCwHLdNW4OHEuv8"
+              data-poster="/images/works/academy-s2.jpg" data-label="«Лица Академии» — сезон 2">
+              <button class="yt-btn" type="button" aria-label="Загрузить и смотреть «Лица Академии» — сезон 2 (плейлист YouTube)">
+                <span class="yt-badge">Сезон 2</span>
+                <span class="video-play-btn" aria-hidden="true">
+                  <svg width="22" height="22" viewBox="0 0 24 24"><path fill="currentColor" d="M8 5v14l11-7z" /></svg>
+                </span>
+              </button>
+            </figure>
+            <figure class="yt-facade" data-yt="m9kjzdKefv8" data-list="PLtRxWmHLfr5QfC5YhjqEJcL8QLUXbbH0g"
+              data-poster="/images/works/academy-s3.jpg" data-label="«Лица Академии» — сезон 3">
+              <button class="yt-btn" type="button" aria-label="Загрузить и смотреть «Лица Академии» — сезон 3 (плейлист YouTube)">
+                <span class="yt-badge">Сезон 3</span>
+                <span class="video-play-btn" aria-hidden="true">
+                  <svg width="22" height="22" viewBox="0 0 24 24"><path fill="currentColor" d="M8 5v14l11-7z" /></svg>
+                </span>
+              </button>
+            </figure>
+          </div>
+        </article>
+
+        <!-- Little Spot Productions -->
+        <article class="prod-card" data-reveal>
+          <figure class="yt-facade" data-yt="-WIEqSLyNp8" data-poster="/images/works/hram.jpg"
+            data-label="Выездная запись хора · Little Spot Productions">
+            <button class="yt-btn" type="button" aria-label="Загрузить и смотреть запись хора (YouTube)">
+              <span class="video-play-btn" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24"><path fill="currentColor" d="M8 5v14l11-7z" /></svg>
+              </span>
+            </button>
+          </figure>
+          <div class="prod-body">
+            <div class="case-tags">
+              <span class="tag tag-accent">Little Spot Productions · USA</span>
+              <span class="tag">апрель 2021</span>
+            </div>
+            <h3 class="prod-title">Запись хора</h3>
+          </div>
+        </article>
+
+        <!-- ТСЛ и МДА · запись хоровых коллективов -->
+        <article class="prod-card prod-card-wide" data-reveal>
+          <div class="prod-body">
+            <div class="case-tags">
+              <span class="tag tag-accent">Троице-Сергиева Лавра · МДА</span>
+              <span class="tag">запись хоровых коллективов</span>
+            </div>
+            <h3 class="prod-title">Запись хоровых коллективов · ТСЛ и&nbsp;МДА</h3>
+            <p class="prod-desc">
+              Запись хоровых коллективов для&nbsp;YouTube-каналов Троице-Сергиевой Лавры
+              и&nbsp;Московской духовной академии. Указан в&nbsp;описаниях выпусков.
+            </p>
+          </div>
+          <div class="yt-grid">
+            <figure class="yt-facade" data-yt="A3U9VM4VMZQ" data-poster="/images/works/lavra.jpg"
+              data-label="Хор Троице-Сергиевой Лавры">
+              <button class="yt-btn" type="button" aria-label="Смотреть: хор Троице-Сергиевой Лавры (YouTube)">
+                <span class="yt-badge">Лавра</span>
+                <span class="video-play-btn" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24"><path fill="currentColor" d="M8 5v14l11-7z" /></svg></span>
+              </button>
+            </figure>
+            <figure class="yt-facade" data-yt="vEZSu4PuAjw" data-poster="/images/works/mda-1.jpg"
+              data-label="МДА — выпуск">
+              <button class="yt-btn" type="button" aria-label="Смотреть: МДА, выпуск (YouTube)">
+                <span class="yt-badge">МДА</span>
+                <span class="video-play-btn" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24"><path fill="currentColor" d="M8 5v14l11-7z" /></svg></span>
+              </button>
+            </figure>
+            <figure class="yt-facade" data-yt="GiZDXWU2Qd4" data-poster="/images/works/mda-2.jpg"
+              data-label="МДА — выпуск">
+              <button class="yt-btn" type="button" aria-label="Смотреть: МДА, выпуск (YouTube)">
+                <span class="yt-badge">МДА</span>
+                <span class="video-play-btn" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24"><path fill="currentColor" d="M8 5v14l11-7z" /></svg></span>
+              </button>
+            </figure>
+            <figure class="yt-facade" data-yt="1GnXHozaAFY" data-poster="/images/works/mda-3.jpg"
+              data-label="МДА — выпуск">
+              <button class="yt-btn" type="button" aria-label="Смотреть: МДА, выпуск (YouTube)">
+                <span class="yt-badge">МДА</span>
+                <span class="video-play-btn" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24"><path fill="currentColor" d="M8 5v14l11-7z" /></svg></span>
+              </button>
+            </figure>
+            <figure class="yt-facade" data-yt="8bgnxtQuYqE" data-poster="/images/works/mda-4.jpg"
+              data-label="МДА — выпуск">
+              <button class="yt-btn" type="button" aria-label="Смотреть: МДА, выпуск (YouTube)">
+                <span class="yt-badge">МДА</span>
+                <span class="video-play-btn" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24"><path fill="currentColor" d="M8 5v14l11-7z" /></svg></span>
+              </button>
+            </figure>
+            <figure class="yt-facade" data-yt="qpxHatbzeh0" data-poster="/images/works/mda-5.jpg"
+              data-label="МДА — выпуск">
+              <button class="yt-btn" type="button" aria-label="Смотреть: МДА, выпуск (YouTube)">
+                <span class="yt-badge">МДА</span>
+                <span class="video-play-btn" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24"><path fill="currentColor" d="M8 5v14l11-7z" /></svg></span>
+              </button>
+            </figure>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ 04 · СЕТАП ═══ -->
+  <section id="setup" class="section section-p section-alt" aria-label="Сетап">
+    <div class="wrap">
+      <header class="head head-stacked" data-reveal>
+        <span class="head-no">04 / сетап</span>
+        <h2>Сетап</h2>
+      </header>
+
+      <div class="spec-grid" data-reveal>
+        <div class="spec-row"><span class="spec-k">Студия</span><span class="spec-v">Subbox Records, Санкт-Петербург</span></div>
+        <div class="spec-row"><span class="spec-k">Мониторинг</span><span class="spec-v">Adam A8X + Sub 8 · KRK 7000b</span></div>
+        <div class="spec-row"><span class="spec-k">Микрофоны</span><span class="spec-v">Neumann M49 · Telefunken e251 · UA Sphere DLX · Shure SM7B · Slate ML-2</span></div>
+        <div class="spec-row"><span class="spec-k">Канал записи</span><span class="spec-v">Avalon VT-737SP</span></div>
+        <div class="spec-row"><span class="spec-k">Аналоговая суммирующая</span><span class="spec-v">SPL MixDream 2384 · SSL Fusion · SSL The Bus+ · Pultec</span></div>
+        <div class="spec-row"><span class="spec-k">Конверсия</span><span class="spec-v">UAD Apollo x8p · UA Satellite · Lavry AD122-96</span></div>
+        <div class="spec-row"><span class="spec-k">Продакшн</span><span class="spec-v">Roli Seaboard Rise 45 · Arturia KeyLab 88 mkII</span></div>
+        <div class="spec-row"><span class="spec-k">DAW</span><span class="spec-v">Pro Tools · Ableton Live · Cubase · Reaper</span></div>
+        <div class="spec-row"><span class="spec-k">Реставрация</span><span class="spec-v">iZotope RX · Melodyne</span></div>
+        <div class="spec-row"><span class="spec-k">Видео</span><span class="spec-v">Adobe Premiere Pro · DaVinci Resolve · After Effects</span></div>
+      </div>
+
+      <!-- 05 · Образование (компактно, в той же секции-полосе) -->
+      <header class="head head-stacked edu-head" data-reveal>
+        <span class="head-no">05 / образование</span>
+        <h2>Образование</h2>
+      </header>
+      <ul class="edu-list" data-reveal>
+        <li><span class="edu-year">2025</span><span class="edu-body"><b>Musicheads</b> · Профессиональное сведение и мастеринг <em>(очный интенсив)</em></span></li>
+        <li><span class="edu-year">2023</span><span class="edu-body"><b>Golden Ears</b> (Dave Moulton) · <em>(онлайн)</em></span></li>
+        <li><span class="edu-year">2022</span><span class="edu-body"><b>Musicheads</b> · Основы звукорежиссуры <em>(онлайн)</em></span></li>
+        <li><span class="edu-year">2021</span><span class="edu-body"><b>SkillBox</b> · Sound Designer <em>(онлайн)</em></span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ═══ 06 · КОНТАКТЫ ═══ -->
+  <section id="contact" class="section section-p section-contact-p" aria-label="Контакты">
+    <div class="wrap">
+      <header class="head head-stacked" data-reveal>
+        <span class="head-no">06 / контакты</span>
+        <h2>Связаться <em>со мной</em>.</h2>
+      </header>
+
+      <div class="contact-ways contact-ways-p" data-reveal>
+        <a class="cway cway-primary" href="https://t.me/Blindfo1d" target="_blank" rel="noopener">
+          <span class="cway-k">Telegram</span>
+          <span class="cway-v">@Blindfo1d</span>
+          <svg class="cway-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M7 17L17 7M9 7h8v8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+              stroke-linejoin="round" />
+          </svg>
+        </a>
+        <a class="cway" href="mailto:sedunov@musent.ru">
+          <span class="cway-k">Email</span>
+          <span class="cway-v">sedunov@musent.ru</span>
+          <svg class="cway-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M7 17L17 7M9 7h8v8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+              stroke-linejoin="round" />
+          </svg>
+        </a>
+        <a class="cway" href="/cv/sedunov-cv.pdf" download>
+          <span class="cway-k">Резюме</span>
+          <span class="cway-v">Скачать PDF</span>
+          <svg class="cway-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M7 17L17 7M9 7h8v8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+              stroke-linejoin="round" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer class="foot foot-p">
+    <div class="wrap foot-bottom-wrap">
+      <span>© 2026 Иннокентий Седунов · Композитор · звукорежиссёр · продюсер</span>
+      <span><a href="/">Услуги и запись в студию →</a></span>
+    </div>
+  </footer>
+
+  <script src="portfolio.js"></script>
+</body>
+
+</html>

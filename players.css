@@ -1,0 +1,92 @@
+/* ════════════════════════════════════════════════════════════════════════════
+   players.css — общие стили аудио-плееров (лендинг WORK + переиспользование).
+   Только компоненты плеера. Токены берутся из styles.css. Имена классов не
+   пересекаются с лендингом (лендинг использовал .tcard / .rail).
+   ══════════════════════════════════════════════════════════════════════════ */
+
+.home-works { display: flex; flex-direction: column; gap: 22px; }
+
+/* Теги-чипсы (для A/B-мета) */
+.tag {
+  font-family: var(--font-mono); font-size: 11px; font-weight: 500;
+  letter-spacing: .02em; padding: 5px 10px;
+  border: 1px solid var(--line-2); border-radius: 999px;
+  color: var(--text-dim); background: var(--bg-2);
+}
+
+/* ── Плеер-список ── */
+.player-list { border: 1px solid var(--line); border-radius: var(--radius-l); background: var(--bg-2); overflow: hidden; }
+.tracklist { display: flex; flex-direction: column; }
+.trk {
+  display: grid; grid-template-columns: 44px 1fr auto; align-items: center; gap: 12px;
+  padding: 10px 14px; border-top: 1px solid var(--line);
+  transition: background .2s var(--ease);
+}
+.tracklist > .trk:first-child { border-top: none; }
+.trk:hover { background: var(--bg-3); }
+.trk.playing { background: var(--accent-soft); }
+
+.trk-btn {
+  width: 44px; height: 44px; flex: none; display: grid; place-items: center;
+  border-radius: 50%; background: var(--bg-3); border: 1px solid var(--line-2); color: var(--text);
+  transition: background .18s var(--ease), color .18s var(--ease), border-color .18s var(--ease);
+}
+.trk-btn:hover { border-color: var(--accent); color: var(--accent); }
+.trk.playing .trk-btn { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); }
+.trk-btn .ico-pause { display: none; }
+.trk.playing .trk-btn .ico-play { display: none; }
+.trk.playing .trk-btn .ico-pause { display: block; }
+
+.trk-main { min-width: 0; display: flex; flex-direction: column; gap: 2px; }
+.trk-title { font-size: 15px; font-weight: 600; color: var(--text); line-height: 1.3; }
+.trk-title .trk-num { color: var(--text-mute); font-family: var(--font-mono); font-size: 12px; margin-right: 8px; }
+.trk-sub { font-size: 12.5px; color: var(--text-dim); }
+.trk-sub .dot { margin: 0 6px; opacity: .5; }
+.trk-time { font-family: var(--font-mono); font-size: 12px; color: var(--text-dim); font-variant-numeric: tabular-nums; }
+
+.trk-seek { grid-column: 1 / -1; display: none; align-items: center; gap: 12px; padding: 4px 2px 8px; }
+.trk.playing .trk-seek { display: flex; }
+.trk-cur { font-family: var(--font-mono); font-size: 11px; color: var(--accent); min-width: 38px; font-variant-numeric: tabular-nums; }
+
+/* range (seek) */
+.seek {
+  -webkit-appearance: none; appearance: none;
+  flex: 1; height: 6px; border-radius: 999px; background: var(--line-2); cursor: pointer;
+  --fill: 0%;
+  background-image: linear-gradient(var(--accent), var(--accent));
+  background-size: var(--fill) 100%; background-repeat: no-repeat;
+}
+.seek::-webkit-slider-thumb {
+  -webkit-appearance: none; appearance: none; width: 16px; height: 16px; border-radius: 50%;
+  background: var(--accent); border: 2px solid var(--bg); box-shadow: 0 0 0 1px var(--accent);
+}
+.seek::-moz-range-thumb { width: 14px; height: 14px; border-radius: 50%; background: var(--accent); border: 2px solid var(--bg); box-shadow: 0 0 0 1px var(--accent); }
+.seek::-moz-range-progress { background: var(--accent); height: 6px; border-radius: 999px; }
+.seek:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
+
+/* ── A/B «до/после» ── */
+.ab-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+.ab-card { border: 1px solid var(--line); border-radius: var(--radius-l); background: var(--bg-2); padding: 22px; display: flex; flex-direction: column; gap: 16px; }
+.ab-head { display: flex; flex-direction: column; gap: 8px; }
+.ab-title { font-family: var(--font-display); font-weight: 700; font-size: 20px; }
+.ab-title .ab-artist { color: var(--text-dim); font-weight: 600; font-size: 15px; }
+.ab-meta { display: flex; gap: 8px; flex-wrap: wrap; }
+
+.ab-transport { display: flex; align-items: center; gap: 12px; }
+.ab-play { width: 48px; height: 48px; flex: none; display: grid; place-items: center; border-radius: 50%; background: var(--accent); color: var(--accent-ink); transition: transform .15s var(--ease); }
+.ab-play:hover { transform: scale(1.05); }
+.ab-play .ico-pause { display: none; }
+.ab-card.playing .ab-play .ico-play { display: none; }
+.ab-card.playing .ab-play .ico-pause { display: block; }
+.ab-time { font-family: var(--font-mono); font-size: 12px; color: var(--text-dim); font-variant-numeric: tabular-nums; min-width: 82px; text-align: right; }
+
+.ab-switch { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; padding: 5px; background: var(--bg); border: 1px solid var(--line); border-radius: 12px; }
+.ab-opt { padding: 11px 10px; border-radius: 8px; text-align: center; font-weight: 700; font-size: 13px; letter-spacing: .04em; color: var(--text-dim); min-height: 44px; transition: color .2s var(--ease), background .2s var(--ease); }
+.ab-opt small { display: block; font-family: var(--font-mono); font-weight: 500; font-size: 10px; letter-spacing: .06em; opacity: .8; margin-top: 2px; }
+.ab-opt[aria-pressed="true"] { color: var(--accent-ink); background: var(--accent); }
+.ab-opt[aria-pressed="true"].ab-opt-before { color: var(--text); background: var(--bg-3); box-shadow: inset 0 0 0 1px var(--line-2); }
+.ab-opt:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+@media (max-width: 720px) {
+  .ab-grid { grid-template-columns: 1fr; }
+}
