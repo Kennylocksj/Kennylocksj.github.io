@@ -21,6 +21,16 @@
   // Кодирует каждый сегмент пути (кириллица в именах файлов → безопасный URL)
   function encPath(base, rel) { return base + String(rel).split("/").map(encodeURIComponent).join("/"); }
 
+  // Язык страницы (ru | en) — из <html lang>. Тексты и поля манифеста подбираются под язык.
+  const LANG = (document.documentElement.getAttribute("lang") || "ru").toLowerCase().indexOf("en") === 0 ? "en" : "ru";
+  const T = LANG === "en"
+    ? { listen: "Listen · ", seekTrack: "Seek", seek: "Seek", version: "Version", all: "All", beforeTop: "BEFORE", beforeSub: "raw", afterTop: "AFTER", afterSub: "mix + master", coverCap: (p, a) => "“" + p + "” — exhibition by " + a }
+    : { listen: "Слушать · ", seekTrack: "Перемотка трека", seek: "Перемотка", version: "Версия", all: "Все", beforeTop: "ДО", beforeSub: "без обработки", afterTop: "ПОСЛЕ", afterSub: "сведение + мастеринг", coverCap: (p, a) => "«" + p + "» — выставка " + a };
+  const pick = (o, key) => (o && o[key + "_" + LANG]) || (o && o[key]) || "";
+  const gTitle = (t) => pick(t, "title");
+  const gGenre = (t) => pick(t, "genre");
+  const gNote = (t) => (LANG === "en" ? t.note_en : t.note) || "";
+
   const ICON_PLAY = '<svg class="ico-play" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M8 5v14l11-7z"/></svg>';
   const ICON_PAUSE = '<svg class="ico-pause" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6 5h4v14H6zm8 0h4v14h-4z"/></svg>';
 
@@ -81,13 +91,13 @@
       const li = document.createElement("li");
       li.className = "trk";
       li.tabIndex = 0;
-      li.dataset.genre = (t.genre || "").toLowerCase();
+      li.dataset.genre = gGenre(t).toLowerCase();
       const sub = opts.subHTML(t);
       li.innerHTML =
-        '<button class="trk-btn" type="button" aria-label="Слушать · ' + escHTML(opts.label(t)) + '">' + ICON_PLAY + ICON_PAUSE + "</button>" +
+        '<button class="trk-btn" type="button" aria-label="' + escHTML(T.listen + opts.label(t)) + '">' + ICON_PLAY + ICON_PAUSE + "</button>" +
         '<div class="trk-main"><div class="trk-title">' + opts.titleHTML(t, i) + "</div>" + (sub ? '<div class="trk-sub">' + sub + "</div>" : "") + "</div>" +
         '<div class="trk-time">' + fmtTime(t.duration) + "</div>" +
-        '<div class="trk-seek"><span class="trk-cur">0:00</span><input class="seek" type="range" min="0" max="' + Math.max(1, Math.round(t.duration || 1)) + '" step="0.1" value="0" aria-label="Перемотка трека"></div>';
+        '<div class="trk-seek"><span class="trk-cur">0:00</span><input class="seek" type="range" min="0" max="' + Math.max(1, Math.round(t.duration || 1)) + '" step="0.1" value="0" aria-label="' + T.seekTrack + '"></div>';
       listEl.appendChild(li);
       const row = { li, btn: $(".trk-btn", li), seek: $(".seek", li), cur: $(".trk-cur", li), src: opts.srcFor(t), dur: t.duration || 0 };
       rows[i] = row;
@@ -145,18 +155,18 @@
     const card = document.createElement("article");
     card.className = "ab-card";
     card.tabIndex = 0;
-    const meta = [pair.genre, pair.year].filter(Boolean).join(" · ");
+    const meta = [gGenre(pair), pair.year].filter(Boolean).join(" · ");
     card.innerHTML =
-      '<div class="ab-head"><div class="ab-title">' + escHTML(pair.title) +
+      '<div class="ab-head"><div class="ab-title">' + escHTML(gTitle(pair)) +
       (pair.artist ? ' <span class="ab-artist">— ' + escHTML(pair.artist) + "</span>" : "") + "</div>" +
       (meta ? '<div class="ab-meta"><span class="tag">' + escHTML(meta) + "</span></div>" : "") + "</div>" +
       '<div class="ab-transport">' +
       '<button class="ab-play" type="button" aria-label="Play / pause">' + ICON_PLAY + ICON_PAUSE + "</button>" +
-      '<input class="seek" type="range" min="0" max="1" step="0.1" value="0" aria-label="Перемотка">' +
+      '<input class="seek" type="range" min="0" max="1" step="0.1" value="0" aria-label="' + T.seek + '">' +
       '<span class="ab-time">0:00 / 0:00</span></div>' +
-      '<div class="ab-switch" role="group" aria-label="Версия">' +
-      '<button class="ab-opt ab-opt-before" type="button" data-v="before" aria-pressed="true">ДО<small>без обработки</small></button>' +
-      '<button class="ab-opt ab-opt-after" type="button" data-v="after" aria-pressed="false">ПОСЛЕ<small>сведение + мастеринг</small></button>' +
+      '<div class="ab-switch" role="group" aria-label="' + T.version + '">' +
+      '<button class="ab-opt ab-opt-before" type="button" data-v="before" aria-pressed="true">' + T.beforeTop + '<small>' + T.beforeSub + '</small></button>' +
+      '<button class="ab-opt ab-opt-after" type="button" data-v="after" aria-pressed="false">' + T.afterTop + '<small>' + T.afterSub + '</small></button>' +
       "</div>";
 
     const before = new Audio(encPath("/audio/works/", pair.before));
@@ -251,9 +261,9 @@
   function initGenreTabs(tabsEl, listEl, tracks) {
     if (!tabsEl) return;
     const genres = [];
-    tracks.forEach((t) => { const g = (t.genre || "").trim(); if (g && !genres.includes(g)) genres.push(g); });
+    tracks.forEach((t) => { const g = gGenre(t).trim(); if (g && !genres.includes(g)) genres.push(g); });
     if (genres.length < 2) { tabsEl.remove(); return; }
-    const opts = [{ key: "*", label: "Все" }].concat(genres.map((g) => ({ key: g.toLowerCase(), label: g })));
+    const opts = [{ key: "*", label: T.all }].concat(genres.map((g) => ({ key: g.toLowerCase(), label: g })));
     opts.forEach((o, i) => {
       const b = document.createElement("button");
       b.type = "button"; b.className = "genre-tab"; b.dataset.key = o.key;
@@ -277,15 +287,15 @@
       const amb = await fetch("/audio/ambient/manifest.json").then((r) => r.json());
       if (amb.cover) {
         const fig = $("#ambient-cover"), img = $("#ambient-cover-img");
-        img.alt = "«" + (amb.project || "") + "» — выставка Екатерины Ерохиной";
+        img.alt = T.coverCap(pick(amb, "project"), pick(amb, "artist"));
         img.onload = () => { fig.hidden = false; };
         img.onerror = () => { fig.hidden = true; };
         img.src = amb.cover; // если файла нет — figure остаётся скрытой, вёрстка не ломается
       }
       createListPlayer($("#ambient-tracks"), amb.tracks, {
         srcFor: (t) => encPath("/audio/ambient/", t.file),
-        label: (t) => t.title,
-        titleHTML: (t) => '<span class="trk-num">' + String(t.n).padStart(2, "0") + "</span>" + escHTML(t.title),
+        label: (t) => gTitle(t),
+        titleHTML: (t) => '<span class="trk-num">' + String(t.n).padStart(2, "0") + "</span>" + escHTML(gTitle(t)),
         subHTML: () => "",
       });
     } catch (e) { console.warn("ambient manifest error", e); }
@@ -302,9 +312,9 @@
       const show = await fetch("/audio/mixing-showcase/manifest.json").then((r) => r.json());
       createListPlayer($("#showcase-tracks"), show.tracks, {
         srcFor: (t) => encPath("/audio/mixing-showcase/", t.file),
-        label: (t) => (t.artist ? t.artist + " — " : "") + t.title,
-        titleHTML: (t) => escHTML(t.title),
-        subHTML: (t) => [t.artist, t.genre, t.note].filter(Boolean).map(escHTML).join('<span class="dot">·</span>'),
+        label: (t) => (t.artist ? t.artist + " — " : "") + gTitle(t),
+        titleHTML: (t) => escHTML(gTitle(t)),
+        subHTML: (t) => [t.artist, gGenre(t), gNote(t)].filter(Boolean).map(escHTML).join('<span class="dot">·</span>'),
       });
       initGenreTabs($("#showcase-tabs"), $("#showcase-tracks"), show.tracks);
     } catch (e) { console.warn("showcase manifest error", e); }

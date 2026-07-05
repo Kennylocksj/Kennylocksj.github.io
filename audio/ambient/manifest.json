@@ -1,21 +1,24 @@
 {
   "project": "Путь к свету",
+  "project_en": "The Path to the Light",
   "artist": "Екатерина Ерохина",
+  "artist_en": "Ekaterina Erokhina",
   "venue": "Государственный Кремлёвский Дворец",
+  "venue_en": "State Kremlin Palace",
   "date": "2026-06-16",
   "cover": "/images/paintings/put_k_svetu.png",
   "tracks": [
-    { "n": 1,  "title": "Путь к свету начинается",                       "file": "01_Путь_к_свету_начинается.mp3",                      "duration": 77, "painting": null },
-    { "n": 2,  "title": "Маяк не меняет направление ветра",              "file": "02_Маяк_не_меняет_направление_ветра.mp3",             "duration": 90, "painting": null },
-    { "n": 3,  "title": "У каждого человека есть свой маяк",             "file": "03_У_каждого_человека_есть_свой_маяк.mp3",            "duration": 62, "painting": null },
-    { "n": 4,  "title": "Иногда свет находится не на горизонте, а внутри нас", "file": "04_Иногда_свет_находится_не_на_горизонте_а_внутри_нас.mp3", "duration": 56, "painting": null },
-    { "n": 5,  "title": "Среди перемен человеку необходимы ориентиры",   "file": "05_Среди_перемен_человеку_необходимы_ориентиры.mp3",  "duration": 60, "painting": null },
-    { "n": 6,  "title": "Мы ищем свет",                                  "file": "06_Мы_ищем_свет.mp3",                                "duration": 62, "painting": null },
-    { "n": 7,  "title": "Пока виден свет — путь продолжается",           "file": "07_Пока_виден_свет_путь_продолжается.mp3",            "duration": 40, "painting": null },
-    { "n": 8,  "title": "Настоящий маяк виден даже сквозь туман времени","file": "08_Настоящий_маяк_виден_даже_сквозь_туман_времени.mp3","duration": 49, "painting": null },
-    { "n": 9,  "title": "Не потерять себя — тоже искусство навигации",   "file": "09_Не_потерять_себя_тоже_искусство_навигации.mp3",    "duration": 51, "painting": null },
-    { "n": 10, "title": "В каждом море есть своя глубина",               "file": "10_В_каждом_море_есть_своя_глубина.mp3",              "duration": 68, "painting": null },
-    { "n": 11, "title": "Море никогда не бывает одинаковым. Как и человек", "file": "11_Море_никогда_не_бывает_одинаковым_Как_и_человек.mp3", "duration": 58, "painting": null },
-    { "n": 12, "title": "Мы приходим к морю, чтобы услышать себя",       "file": "12_Мы_приходим_к_морю_чтобы_услышать_себя.mp3",       "duration": 58, "painting": null }
+    { "n": 1,  "title": "Путь к свету начинается",                       "title_en": "The Path to the Light Begins",              "file": "01_Путь_к_свету_начинается.mp3",                      "duration": 77, "painting": null },
+    { "n": 2,  "title": "Маяк не меняет направление ветра",              "title_en": "A Lighthouse Doesn't Change the Wind",      "file": "02_Маяк_не_меняет_направление_ветра.mp3",             "duration": 90, "painting": null },
+    { "n": 3,  "title": "У каждого человека есть свой маяк",             "title_en": "Everyone Has Their Own Lighthouse",         "file": "03_У_каждого_человека_есть_свой_маяк.mp3",            "duration": 62, "painting": null },
+    { "n": 4,  "title": "Иногда свет находится не на горизонте, а внутри нас", "title_en": "Sometimes the Light Is Within Us, Not on the Horizon", "file": "04_Иногда_свет_находится_не_на_горизонте_а_внутри_нас.mp3", "duration": 56, "painting": null },
+    { "n": 5,  "title": "Среди перемен человеку необходимы ориентиры",   "title_en": "Amid Change, We Need Landmarks",            "file": "05_Среди_перемен_человеку_необходимы_ориентиры.mp3",  "duration": 60, "painting": null },
+    { "n": 6,  "title": "Мы ищем свет",                                  "title_en": "We Search for the Light",                   "file": "06_Мы_ищем_свет.mp3",                                "duration": 62, "painting": null },
+    { "n": 7,  "title": "Пока виден свет — путь продолжается",           "title_en": "While the Light Is Visible, the Path Goes On", "file": "07_Пока_виден_свет_путь_продолжается.mp3",         "duration": 40, "painting": null },
+    { "n": 8,  "title": "Настоящий маяк виден даже сквозь туман времени","title_en": "A True Lighthouse Shines Through the Fog of Time", "file": "08_Настоящий_маяк_виден_даже_сквозь_туман_времени.mp3", "duration": 49, "painting": null },
+    { "n": 9,  "title": "Не потерять себя — тоже искусство навигации",   "title_en": "Not Losing Yourself Is Also an Art of Navigation", "file": "09_Не_потерять_себя_тоже_искусство_навигации.mp3", "duration": 51, "painting": null },
+    { "n": 10, "title": "В каждом море есть своя глубина",               "title_en": "Every Sea Has Its Own Depth",               "file": "10_В_каждом_море_есть_своя_глубина.mp3",              "duration": 68, "painting": null },
+    { "n": 11, "title": "Море никогда не бывает одинаковым. Как и человек", "title_en": "The Sea Is Never the Same. Nor Are We",   "file": "11_Море_никогда_не_бывает_одинаковым_Как_и_человек.mp3", "duration": 58, "painting": null },
+    { "n": 12, "title": "Мы приходим к морю, чтобы услышать себя",       "title_en": "We Come to the Sea to Hear Ourselves",      "file": "12_Мы_приходим_к_морю_чтобы_услышать_себя.mp3",       "duration": 58, "painting": null }
   ]
 }

@@ -5,6 +5,7 @@
       "artist": "Varika",
       "title": "Red",
       "genre": "альтернатива / инди",
+      "genre_en": "alternative / indie",
       "year": null,
       "before": "track-01/before.mp3",
       "after": "track-01/after.mp3"
@@ -13,7 +14,9 @@
       "id": "track-02",
       "artist": "ZarisovkN",
       "title": "Записная книжка",
+      "title_en": "Notebook",
       "genre": "поп-рок",
+      "genre_en": "pop-rock",
       "year": null,
       "before": "track-02/before.mp3",
       "after": "track-02/after.mp3"

@@ -1,15 +1,15 @@
 {
   "tracks": [
-    { "artist": "Slepa",                "title": "Прекрасное далёко", "genre": "хип-хоп",    "file": "slepa-prekrasnoe-daleko.mp3",          "duration": 141 },
-    { "artist": "ZarisovkN",            "title": "Ещё минуту",        "genre": "поп-рок",    "file": "zarisovkn-eshchyo-minutu.mp3",         "duration": 156 },
-    { "artist": "ZarisovkN",            "title": "Свет фонарей",      "genre": "поп-рок",    "file": "zarisovkn-svet-fonarey.mp3",           "duration": 156 },
-    { "artist": "Slepa",                "title": "Че ты",             "genre": "хип-хоп",    "file": "slepa-che-ty.mp3",                     "duration": 151 },
-    { "artist": "Blindfo1d",            "title": "call me",           "genre": "electronic", "file": "blindfo1d-call-me.mp3",                "duration": 147 },
-    { "artist": "Blindfo1d",            "title": "vast horizons",     "genre": "electronic", "file": "blindfo1d-vast-horizons.mp3",          "duration": 139 },
-    { "artist": "Blindfo1d, Loco Loco", "title": "Tacata (remix)",    "genre": "electronic", "file": "blindfo1d-loco-loco-tacata-remix.mp3", "duration": 117 },
-    { "artist": "Blindfo1d",            "title": "wings of waiting",  "genre": "electronic", "file": "blindfo1d-wings-of-waiting.mp3",        "duration": 117 },
-    { "artist": null,                   "title": "young once",        "genre": "поп-рок",    "file": "young-once.mp3",                       "duration": 171 },
-    { "artist": null,                   "title": "Notes",             "genre": "модерн-рок", "note": "аранжировка", "file": "notes.mp3",     "duration": 94 },
-    { "artist": null,                   "title": "halo on hold",      "genre": "модерн-рок", "note": "аранжировка", "file": "halo-on-hold.mp3","duration": 66 }
+    { "artist": "Slepa",                "title": "Прекрасное далёко", "title_en": "Prekrasnoe Daleko", "genre": "хип-хоп",    "genre_en": "hip-hop",     "file": "slepa-prekrasnoe-daleko.mp3",          "duration": 141 },
+    { "artist": "ZarisovkN",            "title": "Ещё минуту",        "title_en": "One More Minute",   "genre": "поп-рок",    "genre_en": "pop-rock",    "file": "zarisovkn-eshchyo-minutu.mp3",         "duration": 156 },
+    { "artist": "ZarisovkN",            "title": "Свет фонарей",      "title_en": "Streetlights",      "genre": "поп-рок",    "genre_en": "pop-rock",    "file": "zarisovkn-svet-fonarey.mp3",           "duration": 156 },
+    { "artist": "Slepa",                "title": "Че ты",             "title_en": "Che Ty",            "genre": "хип-хоп",    "genre_en": "hip-hop",     "file": "slepa-che-ty.mp3",                     "duration": 151 },
+    { "artist": "Blindfo1d",            "title": "call me",           "genre": "electronic", "genre_en": "electronic", "file": "blindfo1d-call-me.mp3",                "duration": 147 },
+    { "artist": "Blindfo1d",            "title": "vast horizons",     "genre": "electronic", "genre_en": "electronic", "file": "blindfo1d-vast-horizons.mp3",          "duration": 139 },
+    { "artist": "Blindfo1d, Loco Loco", "title": "Tacata (remix)",    "genre": "electronic", "genre_en": "electronic", "file": "blindfo1d-loco-loco-tacata-remix.mp3", "duration": 117 },
+    { "artist": "Blindfo1d",            "title": "wings of waiting",  "genre": "electronic", "genre_en": "electronic", "file": "blindfo1d-wings-of-waiting.mp3",        "duration": 117 },
+    { "artist": null,                   "title": "young once",        "genre": "поп-рок",    "genre_en": "pop-rock",    "file": "young-once.mp3",                       "duration": 171 },
+    { "artist": null,                   "title": "Notes",             "genre": "модерн-рок", "genre_en": "modern rock", "note": "аранжировка", "note_en": "arrangement", "file": "notes.mp3",     "duration": 94 },
+    { "artist": null,                   "title": "halo on hold",      "genre": "модерн-рок", "genre_en": "modern rock", "note": "аранжировка", "note_en": "arrangement", "file": "halo-on-hold.mp3","duration": 66 }
   ]
 }
