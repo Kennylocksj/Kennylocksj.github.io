@@ -10,6 +10,8 @@
     { "artist": "Blindfo1d",            "title": "wings of waiting",  "genre": "electronic", "genre_en": "electronic", "file": "blindfo1d-wings-of-waiting.mp3",        "duration": 117 },
     { "artist": null,                   "title": "young once",        "genre": "поп-рок",    "genre_en": "pop-rock",    "file": "young-once.mp3",                       "duration": 171 },
     { "artist": null,                   "title": "Notes",             "genre": "модерн-рок", "genre_en": "modern rock", "note": "аранжировка", "note_en": "arrangement", "file": "notes.mp3",     "duration": 94 },
-    { "artist": null,                   "title": "halo on hold",      "genre": "модерн-рок", "genre_en": "modern rock", "note": "аранжировка", "note_en": "arrangement", "file": "halo-on-hold.mp3","duration": 66 }
+    { "artist": null,                   "title": "halo on hold",      "genre": "модерн-рок", "genre_en": "modern rock", "note": "аранжировка", "note_en": "arrangement", "file": "halo-on-hold.mp3","duration": 66 },
+    { "artist": "ShantiPlak",           "title": "Люблю тебя на дистанции", "title_en": "I Love You from a Distance", "genre": "поп-рок", "genre_en": "pop-rock", "file": "shantiplak-lyublyu-tebya-na-distancii.mp3", "duration": 196 },
+    { "artist": "ShantiPlak",           "title": "Девочка из мультика", "title_en": "Girl from a Cartoon", "genre": "поп-рок", "genre_en": "pop-rock", "file": "shantiplak-ooo-ooo.mp3", "duration": 171 }
   ]
 }
