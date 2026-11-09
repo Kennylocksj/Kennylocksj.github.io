@@ -12,6 +12,9 @@
     { "artist": null,                   "title": "Notes",             "genre": "модерн-рок", "genre_en": "modern rock", "note": "аранжировка", "note_en": "arrangement", "file": "notes.mp3",     "duration": 94 },
     { "artist": null,                   "title": "halo on hold",      "genre": "модерн-рок", "genre_en": "modern rock", "note": "аранжировка", "note_en": "arrangement", "file": "halo-on-hold.mp3","duration": 66 },
     { "artist": "ShantiPlak",           "title": "Люблю тебя на дистанции", "title_en": "I Love You from a Distance", "genre": "поп-рок", "genre_en": "pop-rock", "file": "shantiplak-lyublyu-tebya-na-distancii.mp3", "duration": 196 },
-    { "artist": "ShantiPlak",           "title": "Девочка из мультика", "title_en": "Girl from a Cartoon", "genre": "поп-рок", "genre_en": "pop-rock", "file": "shantiplak-ooo-ooo.mp3", "duration": 171 }
+    { "artist": "ShantiPlak",           "title": "Девочка из мультика", "title_en": "Girl from a Cartoon", "genre": "поп-рок", "genre_en": "pop-rock", "file": "shantiplak-ooo-ooo.mp3", "duration": 171 },
+    { "artist": "PlotNoir",             "title": "Лицедей",       "title_en": "Licedei",       "genre": "альтернатива",       "genre_en": "alternative",      "file": "plotnoir-licedei.mp3",                 "duration": 203 },
+    { "artist": "Varika",               "title": "Red",                                        "genre": "альтернатива",       "genre_en": "alternative",      "file": "varika-red.mp3",                     "duration": 196 },
+    { "artist": "ZarisovkN",            "title": "Записная книжка", "title_en": "Notebook",    "genre": "альтернативный рок", "genre_en": "alternative rock", "file": "zarisovkn-zapisknaya-knizhka.mp3",   "duration": 154 }
   ]
 }
