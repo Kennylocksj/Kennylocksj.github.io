@@ -15,7 +15,7 @@
     { "artist": "ShantiPlak",           "title": "Девочка из мультика", "title_en": "Girl from a Cartoon", "genre": "поп-рок", "genre_en": "pop-rock", "file": "shantiplak-ooo-ooo.mp3", "duration": 171 },
     { "artist": "PlotNoir",             "title": "Лицедей",       "title_en": "Licedei",       "genre": "альтернатива",       "genre_en": "alternative",      "file": "plotnoir-licedei.mp3",                 "duration": 203 },
     { "artist": "Varika",               "title": "Red",                                        "genre": "альтернатива",       "genre_en": "alternative",      "file": "varika-red.mp3",                     "duration": 196 },
-    { "artist": "ZarisovkN",            "title": "Записная книжка", "title_en": "Notebook",    "genre": "альтернативный рок", "genre_en": "alternative rock", "file": "zarisovkn-zapisknaya-knizhka.mp3",   "duration": 154 },
+    { "artist": "ZarisovkN",            "title": "Записная книжка", "title_en": "Notebook",    "genre": "альтернатива", "genre_en": "alternative", "file": "zarisovkn-zapisknaya-knizhka.mp3",   "duration": 154 },
     { "artist": "Sergey",               "title": "Любовь это", "title_en": "Love Is", "genre": "русский рок", "genre_en": "russian rock", "file": "sergey-lyubov-eto.mp3", "duration": 195 },
     { "artist": "Sergey",               "title": "Ни кому не дано победить нашу Русь", "title_en": "No One Can Defeat Our Rus", "genre": "русский рок", "genre_en": "russian rock", "file": "sergey-ni-komu-ne-dano-pobedit-nashu-rus.mp3", "duration": 221 },
     { "artist": "Sergey",               "title": "Украли любовь", "title_en": "Love Was Stolen", "genre": "русский рок", "genre_en": "russian rock", "file": "sergey-ukrali-lyubov.mp3", "duration": 165 }
